@@ -1,0 +1,9 @@
+.form_inner
+  %h4.text-center Reset your Password
+  = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post, role: "form" }) do |f|
+    .form-group.email
+      = f.label :email, 'Email Address'
+      = f.email_field :email, autofocus: true, class: "form-control envelope"
+      %i.fa.fa-envelope{:href => "#"}
+    = f.submit  t('.log_in', :default => "Send instructions"), class: "submit"
+

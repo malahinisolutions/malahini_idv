@@ -1,0 +1,52 @@
+.account-area.credentials-page
+  .row
+    .col-lg-12
+      %h1 Personal Information
+      .login-box
+        = bootstrap_devise_error_messages!
+        = form_tag save_personal_data_path, html: { role: "form" } do
+          %p
+            * Your Information must match the information on your government issued document that you will have to submit. If it does not, you will FAIL verification.
+          .spacer
+          .form-group.form-group-space
+            = label_tag "first_name", t('verifications.first_name_label')
+            = text_field_tag "first_name", params[:first_name], autofocus: true, class: "form-control", required: "required"
+          .form-group.form-group-space
+            = label_tag "last_name", t('verifications.last_name_label')
+            = text_field_tag "last_name", params[:last_name], class: "form-control", required: "required"
+          .form-group.form-group-space
+            = label_tag "date_of_birth", "Date of Birth"
+            .select-fields
+              - date_present = !params["date_of_birth(1i)"].blank? && !params["date_of_birth(2i)"].blank? && !params["date_of_birth(2i)"].blank?
+              = date_select("", "date_of_birth", { order: [:day, :month, :year],prompt: { day: 'Day', month: 'Month', year: 'Year' }, start_year: (Time.now - 17.years).year, end_year: 1900, default: (date_present ? @default_time : nil)}, :class => "form-control date-select", :required => "required")
+            .clear
+          .form-group.form-group-space
+            = label_tag "nationality", "Nationality"
+            = text_field_tag "nationality", params[:nationality], class: "form-control", required: "required"
+          .form-group.form-group-space
+            = label_tag "country_id", "Country"
+            .select-fields
+              = select_tag "country_id", options_for_select( [@country] + Country.where(:active => true).order("Name").collect{ |c| [c.name, c.code]}), {onchange: "getLocations(this.value)", class: "form-control", required: "required"}
+          .form-group.form-group-space#get_states
+            - if params[:state_id]
+              - states = Country.find_by_code(params[:country_id]).states.order("name")
+              - selected_state = State.find(params[:state_id])
+
+              = label_tag "state_id", "State", class: "cursor-pointer"
+              .select-fields
+                = select_tag("state_id", options_for_select( states.map { |state| [state.name, state.id] }, [selected_state.name, selected_state.id]), {class: "form-control"})
+          .form-group.form-group-space.auto-complete#get_cities
+            = label_tag "city_id", "City"
+            = text_field_tag "city_id", params[:city_id], class: "form-control", required: "required"
+          .form-group.form-group-space
+            = label_tag "zip", "ZIP"
+            = text_field_tag "zip", params[:zip], class: "form-control", required: "required"
+          .form-group.form-group-space
+            = label_tag "home_address", "Home address", class: "cursor-pointer"
+            = text_field_tag "home_address", params[:home_address], class: "form-control", required: "required"
+          .form-group.form-group-space
+            = label_tag "mailing_address", t('verifications.mailing_address_label'), class: "cursor-pointer"
+            = text_field_tag "mailing_address", params[:mailing_address], class: "form-control"
+          = submit_tag  "Submit", class: "submit"
+
+.clearfix

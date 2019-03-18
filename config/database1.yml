@@ -1,0 +1,32 @@
+default: &default
+  adapter: mysql2
+  username: root
+  database: db_9bc590_idv
+  password: 
+  pool: 5
+  timeout: 5000
+  host:  localhost
+  #socket: /opt/lampp/var/mysql/mysql.sock
+  #port: 3306
+
+#default: &default
+  #adapter: mysql2
+  #username: root
+  #database: amltoken
+  #password:
+  #pool: 5
+  #host:  localhost
+  #socket: /opt/lampp/var/mysql/mysql.sock
+  #port: 3306
+
+development:
+  <<: *default
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+
+production:
+  <<: *default

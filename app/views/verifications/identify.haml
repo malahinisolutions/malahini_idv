@@ -1,0 +1,26 @@
+.row
+  .col-sm-offset-2.col-sm-8.col-lg-offset-3.col-lg-6
+    .panel.panel-form
+      .panel-heading
+        %h4.text-center Please make a selfie
+      .panel-body
+        / = session[:current_account_information] = nil
+        = form_tag @url, multipart: true, class: 'text-center' do 
+          .form-group
+            = hidden_field_tag "account[live_photo_1]", @photos[0]
+            = hidden_field_tag "account[live_photo_2]", @photos[1]
+          - if !@only_document_form 
+            .form-group.camera-cont
+              = label_tag "capture", "Make TWO live-photos by pressing 'Shoot' button"
+              %br
+              = headshot_default_config(Rails.application.config.session_options[:key], headshot_capture_path)
+              = headshot_camera
+            / = headshot_snap_button('Shoot')
+            .form-group.camera-cont
+              %button#shoot{:name => "button", :onclick => "headshotHandlers.snap();", :type => "button", class: "btn btn-default "} Shoot
+              %button{:name => "button", :onclick => "headshot.configure()", :type => "button", class: "btn btn-default "} Configure
+            .form-group.camera-submit{style: "display:none;"}
+              = submit_tag "Submit", class: "btn btn-block", id: "submit_photos", disabled: true
+          - else
+            .form-group.camera-submit
+              = submit_tag "Submit", class: "btn btn-block btn-default", id: "submit_photos"   

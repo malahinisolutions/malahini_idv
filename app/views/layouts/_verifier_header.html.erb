@@ -1,0 +1,12 @@
+<header>
+  <div class="logo-admin">
+    
+  </div>
+  <div class="my-accout pull-right">
+    <span class="link_username" style="cursor: default;">
+      Hi <%=current_verifier.first_name%>
+    </span>
+    <%= button_to('Logout', destroy_verifier_session_path, :method => :delete, :class=> :'link_btn')%>
+  </div>
+  <div class="clr"></div>
+</header>

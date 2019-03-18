@@ -1,0 +1,1309 @@
+@font-face {
+    font-family: 'TrajanProBold';
+    src: url('/assets/trajanpro-bold.eot');
+    src: url('/assets/trajanpro-bold.eot') format('embedded-opentype'),
+         url('/assets/trajanpro-bold.woff2') format('woff2'),
+         url('/assets/trajanpro-bold.woff') format('woff'),
+         url('/assets/trajanpro-bold.ttf') format('truetype'),
+         url('/assets/trajanpro-bold.svg#TrajanProBold') format('svg');
+}
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('/assets/OpenSans-Light-webfont.eot');
+    src: url('/assets/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/OpenSans-Light-webfont.woff') format('woff'),
+         url('/assets/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('/assets/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'RobotoSlab-Bold';
+   src: url('/assets/RobotoSlab-Bold.eot');
+    src: url('/assets/RobotoSlab-Bold.eot?#iefix') format('embedded-opentype'),
+         url('/assets/RobotoSlab-Bold.woff') format('woff'),
+         url('/assets/RobotoSlab-Bold.ttf') format('truetype'),
+         url('/assets/RobotoSlab-Bold.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ @font-face {
+    font-family: 'open_sansregular';
+    src: url('/assets/OpenSans-Regular-webfont.eot');
+    src: url('/assets/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/OpenSans-Regular-webfont.woff') format('woff'),
+         url('/assets/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('/assets/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('/assets/OpenSans-Bold-webfont.eot');
+    src: url('/assets/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/OpenSans-Bold-webfont.woff') format('woff'),
+         url('/assets/OpenSans-Bold-webfont.ttf') format('truetype'),
+         url('/assets/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900,700);
+/*{font-family: 'Lato', sans-serif;
+ font-weight: 400;}
+*/
+.ui-autocomplete {
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: default;
+  list-style-type: none;
+}
+
+.ui-autocomplete li {
+margin: 0 10px;
+}
+
+/*footer styles*/
+
+#footer{font-family: 'Lato', sans-serif;
+font-weight: 400;
+font-size:15px;}
+#footer a { color:#fff;}
+#footer p span { display:inline-block}
+.footermenu li { display:inline-block;}
+.footermenu li a { color:#fff;
+display:inline-block;}
+
+.footermenu li:after { content:" / ";
+font-family: 'Lato', sans-serif;
+font-weight: 400;
+font-size:15px;
+padding:0px 3px;}
+.footermenu li:last-of-type:after { content: none;
+}
+
+.login-page #footer { background:none;}
+
+.account-profile-page footer .container { width:98%;
+margin:0px auto;
+font-size:15px;
+font-family: 'open_sansregular';}
+.fb-bgcolor {padding: 20px 0px 10px;}
+
+/*welcome page custom styles*/
+
+.welcome-login-page { background:#013660}
+
+.welcome-div-wrap { background:url(/assets/body_bg.jpg) no-repeat;
+background-size:cover;}
+.clr { clear:both}
+
+.welcome-div-wrap .row {margin-bottom: 0px;}
+
+.welcome-div { padding:45px 0px 55px;
+max-width:680px;
+width:680px;}
+
+.welcome-div .subtitle {font-family: 'TrajanProBold';
+font-size:33px;
+line-height:33px;
+font-weight:400;
+padding:45px 0px 25px;
+margin:0px;}
+
+.welcome-div .title {font-family: 'TrajanProBold';
+font-size:47px;
+line-height:47px;
+font-weight:400;
+padding:0px 0px 35px;
+margin:0px;}
+
+.welcome-div .form_group { max-width:575px;
+margin:0px auto;
+display:block;
+padding:50px 0px 75px;}
+
+.welcome-div .form_group h3 {font-family: 'open_sanslight';
+font-size:33px;
+line-height:33px;
+margin:0px 0px;
+padding:0px 0px 60px;
+}
+.welcome-div .form_group .or {font-family: 'RobotoSlab-Bold';
+font-size:18px;
+color:#fff;
+height:60px;
+line-height:60px;
+padding:0px;
+margin:0px;}
+
+.welcome-div .form_group .btn {background: #fee5ac; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM3MzczNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ4JSIgc3RvcC1jb2xvcj0iIzIwMjAyMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #fee5ac 0%, #edc260 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fee5ac), color-stop(100%,#edc260)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #fee5ac 0%, #edc260 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #fee5ac 0%, #edc260 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #fee5ac 0%, #edc260 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #fee5ac 0%,#edc260 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fee5ac', endColorstr='#edc260',GradientType=0 ); /* IE6-8 */
+-moz-border-radius:3px;
+-khtml-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:3px;
+font-size:22px;
+line-height:64px;
+height:64px;
+padding:0px;
+font-family: 'TrajanProBold';
+font-size:22px;
+
+
+}
+
+
+
+/*login page custom styles*/
+
+.login-page header { padding-top:15px;}
+.login-page header .container { padding-left:10px;
+padding-right:0px;}
+
+.login-page header {}
+
+.credentials-page .left-dev { background:url(/assets/vertical-line.jpg) 98% center no-repeat;
+padding-right:20px}
+
+.left-dev-border {background:url(/assets/vertical-line.jpg) 98% center no-repeat;}
+.credentials-page .login-box * {
+	margin:0px;
+	padding:0px;}
+
+.credentials-page .login-box { max-width:440px; margin: 0 auto;}
+
+.credentials-page .login-box label { font-size:16px;
+margin-bottom:10px;
+font-family: 'open_sanslight';
+color:#000000;}
+
+.credentials-page .login-box input[type="email"],
+.credentials-page .login-box input[type="password"],
+.credentials-page .login-box form input[type="text"]
+{ min-height: 48px;
+-moz-border-radius:50px;
+-khtml-border-radius:50px;
+-webkit-border-radius: 50px;
+border-radius: 50px;
+padding-left:50px;
+font-family: 'open_sansregular';
+font-style:14px;
+border:1px solid #e8e9f0;
+}
+
+.credentials-page .login-box form select
+{
+min-height: 48px;
+-moz-border-radius:50px;
+-khtml-border-radius:50px;
+-webkit-border-radius: 50px;
+border-radius: 50px;
+padding-left:50px;
+font-family: 'open_sansregular';
+font-style:14px;
+border:1px solid #e8e9f0;
+background: transparent;
+appearance:none;
+-moz-appearance:none;
+-webkit-appearance:none;
+}
+.date-select
+{
+max-width: 120px !important;
+padding-left:20px !important;
+margin-right: 5px !important;
+float: left;
+}
+.select-fields:after
+{
+clear: both;
+}
+.credentials-page .login-box input[type="password"] { font-size:30px;
+color:#c7cdd3}
+.credentials-page .login-box .email, .credentials-page .login-box .pass, .form-group-space { margin-bottom:33px !important}
+
+.credentials-page .login-box   input[type="submit"]
+{height:48px;
+-moz-border-radius:50px;
+-khtml-border-radius:50px;
+-webkit-border-radius: 50px;
+border-radius: 50px;
+margin-bottom:33px;
+font-size:20px;
+font-family: 'open_sansbold';
+}
+.credentials-page .login-box .fa-key::before {
+    content: "\f084";
+    font-size: 17px;
+}
+
+.credentials-page .note p, .note { font-size:15px;
+line-height:29px;
+color:#5c5c5c;
+font-family: 'open_sansregular';}
+.credentials-page .note h3 {font-size:16px;
+font-family: 'open_sansbold';
+color:#013660;
+text-transform:uppercase;
+padding-bottom:10px;
+padding-top:0px;}
+
+.text-area
+{
+padding-left: 20px;
+padding-right: 20px;
+}
+
+.text-area, .text-area p, .text-area li{
+line-height:29px;
+color:#5c5c5c;
+font-family: 'open_sansregular';
+}
+
+.text-area ul{
+padding-left: 20px;
+}
+
+.text-area ul li{
+padding-left: 10px;
+}
+
+.login-page .login-box { max-width:580px;
+width:580px;
+margin:90px auto 90px;
+float: none;
+}
+.login-page .login-box .form_inner {padding: 45px 16%;}
+
+.login-page .login-box h4 {font-family: 'open_sanslight';
+font-size:32px;
+line-height:32px;
+color:#013660;
+margin:0px;
+padding:0px 0px 20px;
+margin-bottom:50px;
+}
+
+.login-page .login-box .form_inner form { padding:0px;}
+
+.login-page .login-box .form_inner form label { font-size:16px;
+margin-bottom:10px;}
+.login-page .login-box .form_inner form input[type="email"],
+.login-page .login-box .form_inner form input[type="password"],
+.login-page .login-box .form_inner form input[type="text"]
+{ height:48px;
+-moz-border-radius:50px;
+-khtml-border-radius:50px;
+-webkit-border-radius: 50px;
+border-radius: 50px;
+padding-left:50px;
+font-family: 'open_sansregular';
+font-style:14px;
+
+}
+
+.login-page .login-box .form_inner form input[type="password"]{ color:#c7cdd3;
+font-weight:bold;
+font-size:20px;}
+.login-page .login-box .form_inner form input[type="submit"]
+{height:48px;
+-moz-border-radius:50px;
+-khtml-border-radius:50px;
+-webkit-border-radius: 50px;
+border-radius: 50px;
+margin-bottom:50px;
+
+font-size:20px;
+}
+
+input[type="submit"]:disabled
+{
+background-color: #a9aec4;
+}
+
+.login-page .login-box .form_inner form input[type="submit"].with-bg
+{
+background-image:url(/assets/submit-icon.png);
+background-repeat:no-repeat;
+background-position:300px 17px;
+}
+
+
+.login-page .login-box * { padding:0px;
+margin:0px;}
+
+.login-page .form-group  { margin-bottom:55px;}
+.login-page .login-box .form_inner form .forgetp { font-size:14px;}
+.fa-envelope, .fa-key, .fa-field { top:50px;
+left:20px;}
+.login-page .login-box .form_inner form .act-yet { font-size:18px;
+font-family: 'open_sansregular';
+color:#7a818b;
+display:block;
+text-align:center;
+padding:30px 0px 15px;}
+.login-page .login-box .form_inner form .member-now { font-size:15px;
+ font-family: 'open_sansbold';
+ color:#013660;
+ margin:0px;
+ padding:0px;
+ text-align:center;
+ display:block;
+ text-decoration:underline;
+}
+
+
+
+/*account-profile-page styles*/
+.account-profile-page .main-content-area .row { display:table;
+width:100%;
+padding:0px;
+margin:0px;
+max-width:1920px;
+
+}
+
+
+
+.account-profile-page .main-content-area header { background:#013660;
+padding:10px 0px;
+width: 100%;
+min-height: 47px;
+position:relative}
+.account-profile-page .main-content-area header .my-accout {
+}
+
+
+.account-profile-page .sidebar {
+width:20%;
+background:#0a2035;
+display:block;
+float:left;
+max-width:100%;
+padding:25px 0px 0px 0px;
+font-style:15px;
+color:#fff;
+font-size:15px;
+font-family: 'open_sansregular';
+}
+
+.account-profile-page .sidebar .box { padding-left:25px;
+padding-right:25px;}
+.account-profile-page .sidebar .box  span { display:inline-block;
+text-align:center }
+
+.account-profile-page .main-right-area { width:80%}
+
+.account-profile-page .main-content-area { background:#e2e5ea;
+
+
+}
+
+.account-profile-page .page-title { width:100%;
+text-align:center;
+display:inline-block;
+vertical-align:middle}
+
+.account-profile-page .main-content-area header .my-accout { display:inline-block;
+vertical-align:middle;
+max-width:490px;
+margin-right:45px;
+text-align:right;
+position:absolute;
+top:8px;
+right:0px;}
+
+.my-accout button { background:none;
+line-height:35px;
+border:0px;
+color:#fff;
+font-size:16px;
+font-family: 'Lato', sans-serif;
+ font-weight: 400;
+
+}
+
+.my-accout button img { margin-right:10px !important;
+display:inline-block;}
+
+
+
+.account-profile-page .main-content-area section { max-width:1170px;
+margin:0px auto;
+padding:45px 0px 0px;}
+.process-bar * { margin:0px;
+padding:0px;}
+
+.account-profile-page .main-content-area .process-bar {
+height:80px;
+width:100%;
+display:block;
+
+margin-bottom:45px;}
+
+.process-bar .p {
+
+background-color:transparent;
+padding:0px;
+float:left;
+margin:0px;}
+
+.process-bar .p a { display:block;
+padding-left:96px;
+display:table-cell;
+vertical-align:middle;
+height:80px;
+font-size:16px;
+line-height:20px;
+color:#fff;
+font-family: 'Lato', sans-serif;
+ font-weight: 400;
+ text-align:center
+
+
+
+}
+.process-bar .p1 { background:url(/assets/p1h.png) center center no-repeat;
+width:308px;
+height:80px;
+margin:0px 0px 0px 0px;
+padding:0px;}
+.process-bar .p2 { background:url(/assets/p1n.png) center center no-repeat;
+width:308px;
+height:80px;
+margin:0px 0px 0px -25px;
+padding:0px;}
+.process-bar .p2:hover, .process-bar .p2.active { background-image:url(/assets/p1hh.png);
+}
+.process-bar .p3 { background:url(/assets/p2n.png) center center no-repeat;
+width:308px;
+height:80px;
+margin:0px 0px 0px -25px;
+padding:0px;}
+
+.process-bar .p3:hover, .download-page .process-bar .p3.active { background-image:url(/assets/p2h.png);
+}
+.process-bar .p4 { background:url(/assets/p3n.png) center center no-repeat;
+width:312px;
+height:80px;
+margin:0px 0px 0px -25px;
+padding:0px;}
+
+
+.download-page .account-area h1 { line-height:41px;}
+
+.download-page .download-links { text-align:center}
+.download-page .download-links .each { width:49%;
+padding:30px 0px;
+display:inline-block;
+text-align:center;}
+.download-page .download-links a { display:block;
+text-align:center;}
+
+.download-page .download-links a img {
+margin-bottom:25px;
+}
+
+.download-page .download-links a span { display:block;
+font-size:16px;
+font-family: 'open_sansbold';
+color:#013660;
+text-transform:uppercase;
+
+}
+.account-area { background:#fff;
+padding:45px;}
+
+.account-area h1{font-family: 'Lato', sans-serif;
+ font-weight: 900;
+ font-size:26px;
+ line-height:26px;
+ text-transform:uppercase;
+ margin:0px 0px 35px;
+ padding:0px;
+ text-align:center;
+ }
+
+ .clr { clear:both}
+.main-right-area { padding:0px;
+float:left}
+
+ .account-area h2{font-family: 'Lato', sans-serif;
+ font-weight: 700;
+ font-size:20px;
+ line-height:20px;
+ text-transform:uppercase;
+ margin:20px 0px 20px;
+ padding:0px;
+ text-align:center;
+ }
+ .act-details { padding-top:70px;}
+.act-details img { margin-bottom:25px;}
+
+ .act-details p { font-size:17px;
+ color:#000;
+ font-family: 'open_sansregular';
+ margin-bottom:80px;}
+
+ .tutorials li a { padding:0px 5px;
+ height:49px;
+ line-height:49px;
+ font-family: 'Lato', sans-serif;
+ font-weight: 400;
+ font-size:18px;}
+
+.account-profile-page .sidebar { min-height:1066px;}
+
+.frequent-btn  {font-family: 'Lato', sans-serif;
+ font-weight: 700;
+ font-size:16px;
+ width:300px;
+ height:56px;
+ line-height:56px;
+ padding:0px;
+ text-align:center;
+ margin:30px 0px;}
+ .frequent-btn a { padding-left:0px;}
+
+
+ .account-profile-page .main-content-area { max-width:1920px;
+ margin:0px auto;}
+
+ .account-profile-page  .sidebar .round-shape {
+    background: #EDC259;
+    padding: 10px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin: 0px auto;
+    line-height: 37px;
+}
+
+  .account-profile-page .sidebar .fa-map-marker::before {
+    content: "\f041";
+    font-size: 30px;
+}
+
+ .account-profile-page  .sidebar .fa-phone::before {
+    content: "\f095";
+	font-size:30px;
+}
+
+.main-content-area .row { display:table; width:100%}
+.main-content-area .row .row-inr { display: table-row}
+.main-content-area .row .row-inr > div { display: table-cell;
+vertical-align:top;
+float:none;
+min-height:100%;}
+
+.process-bar a:hover { text-decoration:none }
+
+.tutorials-page .left-dev-border { background-repeat:repeat-y;}
+
+
+.tutorials-page .account-area {padding: 45px 45x 45px 0px;}
+.tutorials-page .account-area .video-dev { min-height:500px;
+padding-right:30px;
+padding-left:10px;}
+
+.tutorials li { list-style-type:none}
+.tutorials  * { outline:none}
+.tutorials li a {outline:none;
+text-decoration:none}
+
+.tutorials li.active {background:#013660;}
+.tutorials li.active a { color:#fff;}
+
+.video-dev h2 { font-size:18px;
+margin-top:0px;}
+
+.right-div .frequent-btn { display:block;
+margin:85px auto 110px}
+.right-bottom img { margin-bottom:80px;}
+
+.faq-div { background:#0a2035;
+padding:1px 30px 80px;}
+.faq-div h1 { display:block;
+text-align:center;
+margin:50px auto 40px}
+
+.faq-div .panel {margin-bottom: 20px;
+background-color: #013660;
+border-radius: 0px;
+color:#fff;
+font-family: 'open_sansregular';
+}
+
+.faq-div .panel .panel-heading a { font-size:20px;
+color:#fff;
+text-decoration:none;
+outline:none;
+background:url(/assets/faq1.png) right center no-repeat;
+display:block;
+padding-right:50px;
+}
+
+.faq-div .panel .panel-heading a.p1 {
+	background:url(/assets/faq2.png) right center no-repeat;
+	color:#d0a749;
+	}
+
+	.faq-div .panel .panel-heading a.p1.collapsed{
+	background:url(/assets/faq1.png) right center no-repeat;
+	color:#fff;
+	}
+
+.faq-div .panel .panel-heading a[aria-expanded="true"],
+.faq-div .panel .panel-heading a:hover
+{ color:#d0a749;
+background:url(/assets/faq2.png) right center no-repeat;}
+
+.faq-div .panel .panel-body { font-size:16px;
+line-height:31px;}
+
+.faq-div p {
+color: #ffffff;
+}
+.process-menu { background-color:#0a2035;
+padding:0px 30px 50px }
+.process-menu * { list-style-type:none;
+}
+.process-menu li { margin-bottom:20px;}
+
+.process-menu li a {
+	background: url(/assets/menubg2.png) no-repeat;
+	background-size:100% auto;
+	height:47px;
+	text-align:center;
+	line-height:47px;
+display:block;
+color:#fff;
+font-size:16px;
+font-family: 'Lato', sans-serif;
+font-weight:700;
+text-align: center;
+text-decoration:none;
+text-transform:uppercase;
+width:232px;
+margin:0px auto;
+}
+
+.process-menu li a:hover, .process-menu li.active a {
+	background: url(/assets/menubg1.png) no-repeat 100%/auto;
+}
+
+
+.supoprt-links { padding:0px 30px;}
+
+.online-support-button {background: url(/assets/menubg2.png) no-repeat ;
+background-size:100% auto;
+position:relative;
+	height:47px;
+	text-align:center;
+	line-height:47px;
+display:block;
+color:#fff;
+font-size:16px;
+font-family: 'Lato', sans-serif;
+font-weight:700;
+text-align: center;
+text-decoration:none;
+text-transform:uppercase;
+width:232px;
+padding-left:30px;
+margin-bottom:20px;
+margin:0px auto 20px;}
+
+
+.online-support-button:before{content: url('/assets/icon1.png');
+width:25px;
+height:25px;
+margin-right:20px;
+position:absolute;
+left:25px;
+top:5px;
+}
+.online-support-button:hover {background: url(/assets/menubg1.png) no-repeat;
+color:#fff;
+text-decoration:none;
+}
+
+.submit-ticket-button {background: url(/assets/menubg2.png) no-repeat;
+background-size:100% auto;
+position:relative;
+	height:47px;
+	text-align:center;
+	line-height:47px;
+display:block;
+color:#fff;
+font-size:16px;
+font-family: 'Lato', sans-serif;
+font-weight:700;
+text-align: center;
+text-decoration:none;
+text-transform:uppercase;
+width:232px;
+padding-left:30px;
+margin:0px auto;}
+
+
+.submit-ticket-button:before{content: url('/assets/icon2.png');
+width:25px;
+height:25px;
+margin-right:20px;
+position:absolute;
+left:25px;
+top:0px;
+}
+.submit-ticket-button:hover {background: url(/assets/menubg1.png) no-repeat;
+background-size:100% auto;
+color:#fff;
+text-decoration:none;
+}
+
+/*responisve custom styles */
+
+@media (min-width:1800px) and (max-width:2000px) {
+.account-profile-page .sidebar { width:15.4%;}
+.account-profile-page .main-right-area { width:84.6%}
+}
+
+@media (min-width:1400px) and (max-width:2000px) {
+
+.process-bar .p1 a { padding-left:150px;}
+.account-profile-page .sidebar .box1 { padding-bottom:45px; }
+.account-profile-page .sidebar .box2 { padding-top:18px;
+padding-bottom:15px;}
+.account-profile-page .sidebar .box2 a { margin-bottom:35px;}
+.account-profile-page .sidebar .box3 a { margin-bottom:35px;}
+.account-profile-page .sidebar .box4 { padding-top:25px;}
+
+}
+
+@media (min-width:980px) and (max-width:1800px) {
+.account-profile-page .sidebar
+{max-width: 20%;}
+
+.main-right-area { width:80%}
+
+.process-bar .p { width:26.5%;
+background-size:100% auto;}
+.process-bar .p a {
+
+    padding-left: 70px;
+	font-size:15px;
+	text-align:center}
+}
+
+
+@media (min-width:1201px) {
+#footer .container { width:1200px;
+padding-right:0px}
+
+#footer .col-md-2 { text-align:right}
+}
+
+@media (max-width:1200px){
+.welcome-div {max-width: auto;
+width: auto;
+margin:0px;
+margin:0px;
+float:right}
+.main-content-area .row { display:table; width:100%}
+.main-content-area .row .row-inr { display: table-row}
+.main-content-area .row .row-inr > div { display: table-cell;
+vertical-align:top;
+float:none;
+min-height:100%;}
+.credentials-page .left-dev { background:none;}
+.left-dev-border { background:none;}
+}
+
+@media (min-width:1200px) and (max-width:1400px) {
+.welcome-div-wrap { background-position:none;}
+.welcome-div {max-width: auto;
+width: auto;}
+.account-profile-page .main-content-area section {
+    max-width: 940px;
+}
+
+.tutorials li a {font-size: 14px;
+}
+.main-content-area .row { display:table; width:100%}
+.main-content-area .row .row-inr { display: table-row}
+.main-content-area .row .row-inr > div { display: table-cell;
+vertical-align:top;
+float:none;
+min-height:100%;}
+
+
+}
+
+@media (min-width: 980px) and (max-width: 1200px) {
+.welcome-div-wrap { background-position:none;}
+
+.account-profile-page .main-content-area section {
+    max-width: 840px;
+}
+.page-title .img-responsive { width:275px;
+padding-right: 100px;
+}
+.account-profile-page .main-content-area header .my-accout { margin-right:30px;}
+
+}
+
+@media (max-width:979px) {
+	.process-bar { text-align:center;}
+.process-bar .p { background-color: #94A3BB;
+margin-right:0px;
+float:none;
+display:inline-block;
+}
+
+.sidebar a { display:block}
+.socil-links a { display:inline-block;}
+.account-profile-page .sidebar {
+    min-height: auto;
+	padding-bottom:30px;
+}
+.account-profile-page .main-content-area .process-bar { height:auto}
+.process-bar .p.active {background-color: #043862;}
+.process-bar .p2, .process-bar .p3, .process-bar .p4 {margin: 0px 0px 0px 0px;}
+.welcome-div-wrap { background: url(/assets/bg1.jpg) center center no-repeat !important;
+background-size:cover;}
+.welcome-div { max-width:100%;
+width:100%;
+text-align:center;
+margin:0px;}
+
+.welcome-div .subtitle {
+font-size:26px;
+line-height:26px;
+padding:35px 0px 20px;
+}
+
+.welcome-div .title {
+font-size:60px;
+line-height:60px;
+font-weight:400;
+padding:0px 0px 35px;
+margin:0px;}
+
+.welcome-div .form_group { max-width:575px;
+margin:0px auto;
+display:block;
+padding:40px 0px 65px;}
+
+.welcome-div .form_group h3 {
+font-size:27px;
+line-height:27px;
+margin:0px 0px;
+padding:0px 0px 50px;
+}
+.welcome-div .form_group .or {
+font-size:16px;
+color:#fff;
+height:50px;
+line-height:50px;
+padding:0px;
+margin:0px;}
+.account-profile-page .sidebar
+{max-width: 100%;}
+
+.main-right-area { width:100%}
+
+.tutorials li a {
+    font-size: 13px;
+    line-height: 16px;
+    padding-top: 10px;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.fb-bgcolor .pull-left, .fb-bgcolor .pull-right  { float:none !important;
+display:block;
+text-align:center;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+.page-title .img-responsive { width:220px;
+}
+.account-profile-page .main-content-area header .my-accout { margin-right:15px;}
+
+
+.account-profile-page .main-content-area section {
+    max-width: 740px;
+}
+
+
+#content-left {}
+
+#sidebar {}
+.account-profile-page .main-content-area header .my-accout  {position: relative;
+top: inherit;
+right: inherit;
+display: block;
+float: none !important;
+margin: 8px auto !important;
+clear: both;
+text-align: center;
+}
+}
+
+@media (min-width: 580px) and (max-width: 767px) {
+	.account-profile-page .main-content-area section {
+    max-width: 540px;
+}
+.process-bar .p4 {width: 308px;}
+
+
+
+}
+
+@media (min-width: 480px) and (max-width: 579px) {
+
+
+}
+
+@media (max-width: 767px) {
+.account-area h1 { font-size:22px;}
+
+header .page-title { float:none;
+display:block;
+width: 100%;
+padding-bottom:20px;}
+.account-profile-page .main-content-area header .my-accout {max-width: 100%;
+text-align: right;
+float: right;
+width:100%;
+text-align:right;
+padding-right:15px;}
+
+.account-profile-page .main-content-area header .my-accout  {position: relative;
+top: inherit;
+right: inherit;
+display: block;
+float: none !important;
+margin: 8px auto !important;
+clear: both;
+text-align: center;
+}
+
+.main-content-area .row { display:table; width:100%}
+.main-content-area .row .row-inr { display: block}
+.main-content-area .row .row-inr > div { display:block;
+width:100%;
+float:none;
+min-height:100%;}
+
+.account-area img { max-width:100%;}
+
+
+}
+
+@media (max-width: 580px) {
+.main-content-area .row { display:table; width:100%}
+.main-content-area .row .row-inr { display: block}
+.main-content-area .row .row-inr > div { display:block;
+width:100%;
+float:none;
+min-height:100%;}
+.process-bar .p { width:250px !important;
+margin:0px auto;
+background-position:left center !important;}
+.account-profile-page .main-content-area section {
+    max-width: 440px;
+}
+
+
+
+.welcome-div .subtitle {
+font-size:22px;
+line-height:22px;
+padding:35px 0px 20px;
+}
+
+.welcome-div .title {
+font-size:50px;
+line-height:50px;
+font-weight:400;
+padding:0px 0px 35px;
+margin:0px;}
+
+.welcome-div .form_group { max-width:475px;
+margin:0px auto;
+display:block;
+padding:30px 0px 45px;}
+
+.welcome-div .form_group h3 {
+font-size:27px;
+line-height:27px;
+margin:0px 0px;
+padding:0px 0px 40px;
+}
+.welcome-div .form_group .or {
+font-size:15px;
+color:#fff;
+height:45px;
+line-height:45px;
+}
+.welcome-div .form_group .btn { font-size:16px;
+line-height: 44px;
+height: 44px;}
+
+.login-page header { text-align:center}
+
+.login-page .login-box { max-width:480px;
+margin:10px;}
+
+.login-page .login-box .form_inner {
+    padding: 25px 5%;
+}
+.login-page .login-box h4 {font-size: 26px;
+line-height: 32px;
+color: #013660;
+margin: 0px;
+padding: 0px 0px 10px;
+margin-bottom: 15px;}
+.login-page .form-group, .login-page .form-group {
+    margin-bottom: 35px;
+}
+.login-page .login-box .form_inner form .act-yet {
+    font-size: 15px;
+    padding: 20px 0px 10px;
+}
+.welcome-div-wrap .row {
+    margin-bottom: 0px;
+    margin-right: 0px !important;
+	 margin-right: 0px !important;
+}
+
+/*[class*="col-"] { max-width:80%;
+padding-left:10%;
+padding-right:10%;
+}*/
+
+}
+
+@media (max-width: 579px) {
+.welcome-div .form_group { background-size:cover;
+margin:5px auto;}
+.welcome-div-wrap .row {
+    margin-bottom: 0px;
+    margin-left: 0px !important;
+	 margin-right: 0px !important;
+	 
+}
+.process-menu {
+    background-color: #0a2035;
+    padding: 0px 27px 0px;
+	}
+}
+
+
+
+@media (max-width: 480px) {
+	.main-right-area  { max-width:100%;}
+	.account-profile-page .main-content-area section {
+    max-width: 300px;
+	padding:5px;
+}
+.account-area {
+    background: #fff;
+    padding: 0px;
+}
+.welcome-div{margin-right: 0px !important;}
+.tutorials li a {font-size: 13px;
+line-height:17px;
+}
+
+.welcome-div {
+    padding: 20px 0px 20px;
+}
+
+.welcome-div .subtitle {
+font-size:20px;
+line-height:20px;
+padding:30px 0px 20px;
+}
+
+.welcome-div .title {
+    font-size: 22px;
+    line-height: 10px;
+    font-weight: 400;
+    padding: 0px 0px 10px;
+    margin: 0px;}
+
+
+
+.welcome-div .form_group h3 {
+font-size:24px;
+line-height:32px;
+margin:0px 0px;
+padding:0px 0px 40px;
+}
+.welcome-div .form_group .or {
+font-size:14px;
+color:#fff;
+height:40px;
+line-height:40px;
+}
+.welcome-div .form_group .btn { font-size:14px;
+line-height: 40px;
+height: 40px;}
+.welcome-div .form_group .btn { font-size:12px}
+
+.login-page .login-box { max-width:100%;
+margin:10px auto;}
+.welcome-div .form_group  { margin:5px;}
+.account-profile-page .main-content-area header { text-align:center}
+
+.account-profile-page .main-content-area header * { max-width:100%;}
+.right-bottom img { max-width:230px !important}
+
+.faq-div .panel .panel-heading a { font-size:16px;
+line-height:20px;}
+
+.faq-div .panel .panel-body {
+    font-size: 14px;
+    line-height: 24px;
+}
+.welcome-div-wrap .row {
+    margin-bottom: 0px;
+    margin-left: 0px !important;
+	 margin-right: 0px !important;
+	 
+}
+#footer  .com-md-4{font-size: 13px !important; }
+ .process-menu {
+    background-color: #0a2035;
+    padding: 0px 27px 0px;
+ }
+ .account-area h1 {
+ font-size: 18px;}
+ .account-area h1{margin: 0px 0px 10px;}
+ .credentials-page .login-box label {
+ font-size: 14px;}
+ .select-fields #_date_of_birth_3i{
+	     width: 30% !important;
+ }
+  .select-fields #_date_of_birth_2i{
+	     width: 30% !important;
+ }
+   .select-fields #_date_of_birth_1i{
+	     width: 30% !important;
+ }
+
+}
+
+
+
+@media (max-width: 320px) {
+
+}
+
+@media (max-width: 319px) {
+}
+
+.spacer { margin:0; padding:0; height:50px; }
+
+.form_inner .alert{
+padding: 10px;
+}
+
+.alert li{
+list-style: none;
+}
+
+#preloader  {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: #fefefe;
+     z-index: 9999;
+    height: 100%;
+ }
+#status  {
+     width: 200px;
+     height: 200px;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     background-repeat: no-repeat;
+     background-position: center;
+     margin: -100px 0 0 -100px;
+	 display:none;
+ }
+#status.with_bg {
+    background-image: url("/assets/loading_page.gif");
+}
+
+
+/*animation styles*/
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 360px;
+	height: 380px;
+	text-align:center;
+	margin:0px auto
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}

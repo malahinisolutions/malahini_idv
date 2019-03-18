@@ -1,0 +1,14 @@
+- cur_account = current_account ? current_account.login : "Guest"
+.present
+  .row
+    .col-sm-6.col-lg-8.text-center
+      %h1
+        Welcome, #{cur_account}!
+      .present-p
+        %p
+          The Verification System is the next generation digital currency, and it is the first cryptocurrency built on a regulated public blockchain. It is decentralized to millions of people. Any one in the world can read the Verification System blockchain and participate in transaction verification and Verification System mining. Verification System is only regulated when it comes to anti-money laundering compliance.
+        %p
+          Register to get your Verification System wallet now.
+    .col-sm-6.col-lg-4.text-center
+      =image_tag('wallet.png')
+.header-div

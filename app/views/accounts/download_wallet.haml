@@ -1,0 +1,26 @@
+.account-area
+  .row.download-page
+    .col-lg-12
+      %h1
+        Choosing your operating system
+        = succeed "to" do
+          %br/
+        download
+      .download-links
+        .each
+          /= link_to get_wallet_path(file_name: "windows/Atencoin-qt.exe") do
+          = link_to current_path do
+            %img{:src => "/assets/widows-icon.png"}
+              %span Windows 64 bit - 32 bit
+        .each
+          /= link_to get_wallet_path(file_name: "windows/Atencoin-qt.zip") do
+          = link_to current_path do
+            %img{:src => "/assets/widows-icon.png"}
+              %span Windows (Zip) 64 bit - 32 bit
+        .each
+          /= link_to get_wallet_path(file_name: "macos/Atencoin-Qt.zip") do
+          = link_to current_path do
+            %img{:src => "/assets/mac-icon.png"}
+              %span Mac OS X (zip)
+
+.clearfix

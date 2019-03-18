@@ -5,13 +5,50 @@
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
  * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
  *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
  *
- 
-
+ *= require_self
+ *= require bootstrap.min
+ *= require bootstrap-theme.min
+ *= require font-awesome.min
+ *= require active_scaffold
+ *= require gritter
+ *= require devise_authy
+ *= require style
+ *= require custom
  */
 
-.custom_container {
-  padding-top: 50px;
+/* Autocmplete tag */
+.terms_use_bg{
+  background: #fff;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-family: 'TrajanProBold';
+      margin-top: -22px;
+padding: 15px;
 }
+.terms_use_bg h4{
+    color: #EFB03C;
+      font-size:30px;
+  }
+.terms_use_bg p{
+  font-family: 'robotoslab-regular';
+font-size: 19px;
+font-weight: lighter;
+color: #000000;
+line-height: 36px;
+margin-bottom: 30px;
+}
+.terms_use_bg ol{
+  padding-left: 20px;
+    padding-right: 20px;
+}
+.list-type{
+    color: #013660 !important;
+        font-size: 19px !important;
+    }
+.welcome-div{ float: none !important;   margin-right: 20px !important;}
+.bg_foot{margin-bottom: 100px !important;}

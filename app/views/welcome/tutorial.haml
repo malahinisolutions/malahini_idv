@@ -1,0 +1,251 @@
+.account-area
+  .row
+    .col-lg-6.left-dev-border
+      .video-dev
+        .tab-content.text-center
+          %a{:name => "t1"}
+          %h1 1. Identity Verification
+          %img.img-responsive{:src => "/assets/video-img.jpg"}
+          %br/
+          %br/
+          %a{:name => "t2"}
+          %h2 2. Aten wallet credentials
+          %img.img-responsive{:src => "/assets/video-img.jpg"}
+          %br/
+          %br/
+          %a{:name => "t3"}
+          %h2 3. Downloading your wallet
+          %img.img-responsive{:src => "/assets/video-img.jpg"}
+          %br/
+          %br/
+          %a{:name => "t4"}
+          %h2 4. Inserting your aten credentail on your aten wallet
+          %img.img-responsive{:src => "/assets/video-img.jpg"}
+          %br/
+          %br/
+          %a{:name => "t5"}
+          %h2 5. Set up your wallet address
+          %img.img-responsive{:src => "/assets/video-img.jpg"}
+          %br/
+          %br/
+          %a{:name => "t6"}
+          %h2 6. How to create a passphase
+          %img.img-responsive{:src => "/assets/video-img.jpg"}
+          %br/
+          %br/
+          %a{:name => "t7"}
+          %h2 7. Sending a transaction
+          %img.img-responsive{:src => "/assets/video-img.jpg"}
+          %br/
+          %br/
+          %a{:name => "t8"}
+          %h2 8. Mining for aten coins
+          %img.img-responsive{:src => "/assets/video-img.jpg"}
+          %br/
+          %br/
+    .col-lg-6.right-div
+      .border-left
+        =render 'accounts/tutorials'
+        .text-center.right-bottom
+          .frequent-btn
+            %a{:href => "#{tutorial_path}#faq"} Frequently Asked Questions
+          .flip-container
+            .flipper
+              .front
+
+              .back
+                
+.clearfix
+%a{:name => "faq"}
+.faq-div
+  .faq-div-inr
+    %h1
+      %img.img-responsive.text-center{:src => "/assets/faq.png"}/
+    #accordion
+      .panel
+        .panel-heading
+          %a.p1{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse1"}
+            1. I have registered for an account and confirmed my email, now what?
+        #collapse1.panel-collapse.collapse.in
+          .panel-body
+            %p On the left side of the screen, click on the verification tab. This is where you will verify your Identity.
+            %p First,please read the terms and conditions that are listed there.For your convenience we encourage you to watch the Identity Verification Tutorial Video.
+            %p Please have your Identification Card and your passport ready.
+      .panel
+        .panel-heading
+          %h4.panel-title
+            %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse2", "aria-expanded" => "false"}
+              2. Why is my country not listed on the verification list of countries?
+        #collapse2.panel-collapse.collapse
+          .panel-body
+            %p At this time we only offer our services to certain countries. Please email countries@atenwallet.com and request that your country be listed. Once it is listed, we will notify you via email.
+      .panel
+        .panel-heading
+          %h4.panel-title
+            %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse3"}
+              3. I just completed the identity verification process and it now says pending, what do I do now?
+        #collapse3.panel-collapse.collapse
+          .panel-body
+            %p Please wait about 10 minutes and refresh your page. It should change from pending to verified. While waiting, it is strongly recommended that you start watching the Aten Wallet Credentials Tutorial Video.
+      .panel
+        .panel-heading
+          %h4.panel-title
+            %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse4"}
+              4. I have already had my identification verified, now what do I do next?
+        #collapse4.panel-collapse.collapse
+          .panel-body
+            %p On the left hand side of the page, click on the Aten Credentials Tab.
+            %p Create a username and a user password. Once you have created them, press the save button.
+            %p Afterwards, check your email for an Aten Credentials Verification email. These Aten Credentials are needed in your wallet in order for your Aten Coin Digital Wallet to Work.
+            %p Please watch the Aten Credential Tutorial Video.
+      .panel
+        .panel-heading
+          %h4.panel-title
+            %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse5"}
+              5. Downloading your Aten Coin Wallet.
+        #collapse5.panel-collapse.collapse
+          .panel-body
+            %p After you have confirmed your identity and have created your Aten Wallet Credentials, it is now time to download your Aten Coin Wallet.
+            %p Select the Download Tab on the left hand side of the website.  Then select your operating system and click on it to start the download.
+            %p Please watch the Downloading your Wallet Tutorial Video for more assistance.
+      .panel
+        .panel-heading
+          %h4.panel-title
+            %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse6"}
+              6. How to insert your Aten Wallet Credentials in your Aten Coin Wallet?
+        #collapse6.panel-collapse.collapse
+          .panel-body
+            %p Once your wallet has been downloaded, go to the settings tab and on the dropdown box select Set Credentials.
+            %p Then insert your username that you have created and insert your password and click ok.
+            %p You then will receive a message that says,please encrypt your wallet for safety reasons.
+            %p Select Ok.
+            %p Please watch the Set Aten Credentials Tutorial Video.
+      .panel
+        .panel-heading
+          %h4.panel-title
+            %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse7"}
+              7. How do I know if I inserted my Aten Wallet Credentials correct in my Aten Coin Wallet?
+        #collapse7.panel-collapse.collapse
+          .panel-body
+            %p You will be unable to create a wallet address.This address is used to receive Aten Coins in your wallet if your Aten Credentials are inaccurate.
+      .panel
+        .panel-heading
+          %h4.panel-title
+            %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse8"}
+              8. How do I create an Aten Coin Wallet Address?
+        #collapse8.panel-collapse.collapse
+          .panel-body
+            %p Click on the Receive Tab, then on the bottom right of the page, click the New Address Button.
+            %p A pop up window will appear that says, “New Receiving Address”.
+            %p In the Label section, write down a name for that wallet address. For example, Sarah’s Wallet. Then select OK.
+            %p If you see an error message, then your Aten Credentials are not correct and you need to go back to www.AtenWallet.com and reset your Aten Credentials. Make sure to watch the Creating a Wallet Address Tutorial Video for additional help.
+      .panel
+        .panel-heading
+          %h4.panel-title
+            %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse9"}
+              9. How do I know if I successfully created my wallet address?
+        #collapse9.panel-collapse.collapse
+          .panel-body
+            %p If you did not get an error message after you wrote in the Wallet Label Name and selected OK, then your wallet address has been created.
+            %p On the top of the page there will be two columns, one that says Label and another one that says address.
+            %p If you see the name you created under the Label column and a long row of numbers and letters under the address column, congratulations, you now have a wallet address.
+      .panel
+        .panel-heading
+          %h4.panel-title
+            %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse10"}
+              10. How do I pin my wallet to my desktop taskbar for easy access?
+        #collapse10.panel-collapse.collapse
+          .panel-body
+            %p While your wallet is open, go to your toolbar that is usually at the bottom of your screen and you will see an Aten Coin Icon there.
+            %p Right Click the Icon and select “Pin the program to taskbar.” To know if you did it correctly, right click the Icon again and if the option to unpin it is there, then you know you did it correctly.
+      .panel
+        .panel-heading
+          %h4.panel-title
+            %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse11"}
+              11. How do I encrypt my wallet and add a passphrase?
+        #collapse11.panel-collapse.collapse
+          .panel-body
+            %p Passphrases are used to lock or unlock your wallet for safety reasons. When you send a transaction, if you created a passphrase, then the passphrase must be inserted before your transaction will go through.
+            %p If you decide to encrypt your wallet for safety reasons, do NOT forget the passphrase credential that you created. All your Aten Coins will be locked in your wallet if you forget the passphrase.
+            %p To encrypt your wallet and create a passphrase,go to the settings tab, click encrypt. A window will then appear and ask you create a passphrase.
+            %p Create one, you will be asked to reenter the passphrase you just created. Please reenter it and select ok.
+            %p Make sure you pinned your wallet to your taskbar first. Your wallet will then close and then open back up.
+            %p If you have any issues, please watch the Tutorial Video.
+      .panel
+        .panel-heading
+          %h4.panel-title
+            %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse12"}
+              12. I created my wallet, but now I can’t find it?
+        #collapse12.panel-collapse.collapse
+          .panel-body
+            %p Check your downloads folder.
+            %p Then click atencoin.qt and your wallet should start up immediately.
+            %p Make sure to pin your wallet to your taskbar or create a shortcut for your wallet on your desktop.
+      .panel
+        .panel-heading
+          %h4.panel-title
+            %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse13"}
+              13. How do I receive Aten Coins?
+        #collapse13.panel-collapse.collapse
+          .panel-body
+            %p In order to receive Aten Coins, you need to give your Aten Coin Wallet Address to the person or company that will be sending you Aten Coins.
+            %p To locate your wallet address, go to the receive tab, then under the address column, there is your wallet address. Right Click the Wallet Address and select Copy Address.
+      .panel
+        .panel-heading
+          %h4.panel-title
+            %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse14"}
+              14. How do I send Aten Coins?
+        #collapse14.panel-collapse.collapse
+          .panel-body
+            %p Go to the Send Tab, then where it says pay to, insert the wallet address of the person or company that you wish to send Aten Coins to.
+            %p In the Label Tab, insert the persons name or business there and then click Send and Follow the instructions.
+      .panel
+        .panel-heading
+          %h4.panel-title
+            %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse15"}
+              15. What is the Address Book Tab?
+        #collapse15.panel-collapse.collapse
+          .panel-body
+            %p When you are sending anyone an Aten Coin, you should write in a Label Name during the transaction.
+            %p This allows a contact list of wallets to be easily accessed for future use.
+      .panel
+        .panel-heading
+          %h4.panel-title
+            %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse16"}
+              16. How do I mine Aten Coins?
+        #collapse16.panel-collapse.collapse
+          .panel-body
+            %p Open your wallet, go to the settings tab, then click unlock wallet.
+            %p Please see the Video Tutorial for Mining Aten Coins.
+      .panel
+        .panel-heading
+          %h4.panel-title
+            %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse17"}
+              17. How can I backup my Aten Coin Wallet?
+        #collapse17.panel-collapse.collapse
+          .panel-body
+            %p Please Watch the Video Tutorial called Backing Up Your Wallet.
+            %p This is a necessary step to prevent a total loss of your wallet if a computer theft or loss happens.
+      .panel
+        .panel-heading
+          %h4.panel-title
+            %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse18"}
+              18. I lost my computer with my wallet, what do I do?
+        #collapse18.panel-collapse.collapse
+          .panel-body
+            %p Login to AtenWallet.com, then Change your Aten Credentials Immediately.
+            %p
+              Contact
+              %span
+                %a{:href => "mailto:support@atenwallet.com"} support@atenwallet.com
+                and ask them to help you recover your wallet. Note: You must have had your wallet backed up.
+      .panel
+        .panel-heading
+          %h4.panel-title
+            %a{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapse19"}
+              19. How do I purchase Aten Coins?
+        #collapse19.panel-collapse.collapse
+          .panel-body
+            %p
+              %a{:href => "http://www.AtenPay.com", :target => "_blank"} Go to www.AtenPay.com.
+            %p You must have an Aten Coin wallet first.

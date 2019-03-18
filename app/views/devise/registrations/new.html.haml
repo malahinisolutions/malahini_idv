@@ -1,0 +1,29 @@
+.form_inner
+  %h4.text-center Create Account
+  = bootstrap_devise_error_messages!
+  = form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { role: "form" }) do |f|
+    .form-group.email
+      = f.label :email, 'Email Address'
+      = f.email_field :email, autofocus: true, :required => "true", class: "form-control envelope"
+      %i.fa.fa-envelope{:href => "#"}
+    .form-group.field
+      = f.label :login, 'Login Name'
+      = f.text_field :login, :required => "true", class: "form-control"
+      %i.fa.fa-field.fa-user
+    .form-group.pass
+      = f.label :password, 'Password'
+      = f.password_field :password, autocomplete: "off", :required => "true", class: "form-control"
+      %i.fa.fa-key
+    .form-group.pass
+      = f.label :password_confirmation, 'Confirm Password'
+      = f.password_field :password_confirmation, autocomplete: "off", :required => "true", class: "form-control"
+      %i.fa.fa-key
+    = f.submit  t('.log_in', :default => "Create Account"), class: "submit with-bg"
+
+    %hr/
+    %span.act-yet.text-center Already have Account?
+    %small.member-now.text-center
+      = link_to "Log In", new_account_session_path
+      %br/
+      = link_to t('.resend_confirmation_instructions', :default => "Resend Confirmation Instructions"), new_confirmation_path(resource_name)
+

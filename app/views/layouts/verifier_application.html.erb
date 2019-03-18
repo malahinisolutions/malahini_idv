@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verification</title>
+
+   <link rel="stylesheet" href="/assets/application-1.css" />
+  <%=javascript_include_tag :'application'%>
+  <style>
+    footer{
+      /*position: absolute;*/
+      bottom: 0px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="account-profile-page">
+<%= gflash%>
+<%= yield %>
+<%=render 'layouts/footer_small'%>
+</body>
+</html>

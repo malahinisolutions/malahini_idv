@@ -1,0 +1,13 @@
+.form_inner
+  %h4.text-center Create an account for FREE
+  = form_tag check_agreements_path, id: "agreements_form" do
+    .form-group
+      .row
+        .col-sm-2.col-xs-1
+          = check_box "", "terms_of_use", {checked: params[:terms_of_use].to_s.to_bool}, true, false
+        .col-sm-10.col-xs-11
+          I accept terms and conditions.
+
+      .spacer
+      .text-center
+        = submit_tag "REGISTER", disabled: true, class: "submit", id: "agree_with_terms"

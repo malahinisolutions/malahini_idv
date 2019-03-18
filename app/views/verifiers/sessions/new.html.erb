@@ -1,0 +1,19 @@
+<div class="form_inner">
+  <h4 class="text-center">Log into your Account</h4>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html=>{:class=>'new_account'}) do |f| %>
+      <div class="form-group email">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true,class:'form-control envelope' %>
+        <i class="fa fa-envelope" href="#"></i>
+      </div>
+      <div class="form-group pass">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+        <i class="fa fa-key"></i>
+      </div>
+      <%= f.submit "Log in", class:'submit with-bg'%>
+      <hr>
+  <% end %>
+</div>
+
+

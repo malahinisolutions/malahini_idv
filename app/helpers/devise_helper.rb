@@ -1,4 +1,29 @@
 module DeviseHelper
+
+  def session_link( html_class )
+    if current_account
+      link_to("Logout", destroy_account_session_path, method: :delete, class: html_class)
+    else
+      link_to("Login", new_account_session_path, class: html_class)
+    end
+  end
+
+  def resource_name
+    :account
+  end
+
+  def resource
+    @resource ||= Account.new
+  end
+
+  def devise_mapping
+    @devise_mapping ||= Devise.mappings[:account]
+  end
+
+  def resource_class
+    devise_mapping.to
+  end
+
   def devise_error_messages!
     return "" if resource.errors.empty?
 

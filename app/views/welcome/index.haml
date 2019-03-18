@@ -1,0 +1,19 @@
+%section.welcome-div-wrap
+  .container
+  .row
+    .welcome-div.pull-right.text-center
+      %a{:href => "#"}
+
+      %h2.subtitle WELCOME TO
+      %h1.title Verification System
+      .form_group.text-center
+        %h3 Verification System
+        .btn_block
+          - if current_account
+            %a.btn.lg_btn.bg_foot{:href => control_profile_path} My Account
+          - elsif current_verifier
+            %a.btn.lg_btn.bg_foot{:href => verifiers_verifications_path} My Account
+          - else
+            %a.btn.lg_btn{:href => new_account_session_path} Login
+            %span.or or
+            %a.btn.lg_btn{:href => agreements_path} Account Registration

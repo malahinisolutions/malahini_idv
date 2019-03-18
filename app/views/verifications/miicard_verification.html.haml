@@ -1,0 +1,8 @@
+%link{:href  => urls[:css_url], :rel => "stylesheet"}/
+%script{:src => urls[:js_url]}
+
+.account-area
+  .row
+    .col-lg-12
+      = render 'layouts/messages'
+      #did{"data-token" => "#{@token}" }

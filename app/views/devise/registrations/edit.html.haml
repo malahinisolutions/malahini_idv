@@ -1,0 +1,14 @@
+.account-area.credentials-page
+  .row
+    .col-lg-12
+      %h1 Change Login Password
+      .login-box
+        = bootstrap_devise_error_messages!
+        = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+          .form-group.form-group-space
+            = label_tag "password", "Password"
+            = f.password_field :password, :autocomplete => "off", :required => "true", class: "form-control"
+          .form-group.form-group-space
+            = f.label :password_confirmation, "Confirm Password", :required => "true", class: "form-control"
+            = f.password_field :password_confirmation, class: "form-control"
+          = submit_tag  "Save", class: "submit"

@@ -1,0 +1,69 @@
+<html>
+  <head>
+
+
+<meta name="viewport" content="width=device-width">
+    <% title= content_for?(:title) ? yield(:title) : "Verification System" %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag params[:controller], 'data-turbolinks-track' => true if Rails.application.assets.find_asset(params[:controller].to_s).present? %>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script>
+      var loading_image = new Image();
+      loading_image.src = '/assets/loading_page.gif';
+    </script>
+  </head>
+  <body class='login-page'>
+    <div id='preloader'>
+      <div class='with_bg' id='status'></div>
+    </div>
+
+    <section class='login_bg'>
+      <header>
+        <div class='container'>
+
+        </div>
+      </header>
+      <div class='container'>
+        <div class='login-box'>
+          <div class='form_inner'>
+            <%= gflash %>
+            <h4 class='text-center'>Enter Your Password</h4>
+            <%=form_for :userdata, url: "welcome/checkpassword" do |f| %>
+
+              <div class='form-group pass'>
+                <div class='row'>
+                  <div class='col-sm-6 col-xs-4'>
+                    <label for="account_password">Password</label>
+                  </div>
+                  <div class='col-sm-6 text-right pull-right forgetp'>
+
+                  </div>
+                </div>
+                <%= f.text_field :userpassword, autocomplete: "off", :required => "true", class: "form-control",autofocus:"true" %>
+                <i class='fa fa-key'></i>
+              </div>
+              <%= f.submit  t('.log_in', :default => "Submit"), class: "submit with-bg" %>
+
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <footer id='footer'>
+        <div class='container text-center'>
+          <p></p>
+          <div class='col-md-4'>
+            Designed &amp; Developed By:
+   <a href="http://www.malahinisolutions.com" title="Malahini Solutions" target="_blank">Malahini Solutions</a>
+          </div>
+          <div class='col-md-6 footermenu none'></div>
+          <div class='col-md-2 none'></div>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>

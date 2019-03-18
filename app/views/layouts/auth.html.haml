@@ -1,0 +1,34 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}/
+    %title= content_for?(:title) ? yield(:title) : "Verification System"
+    %meta{:content => "#{content_for?(:description) ? yield(:description) : "Www"}", :name => "description"}/
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag params[:controller], 'data-turbolinks-track' => true if Rails.application.assets.find_asset(params[:controller].to_s).present?
+    = csrf_meta_tags
+
+
+
+
+    /[if lt IE 9]
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    %script
+      var loading_image = new Image();
+      loading_image.src = '/assets/loading_page.gif';
+  %body.login-page
+    #preloader
+      #status.with_bg
+    = gflash
+    %section.login_bg
+      %header
+        .container
+
+      .container
+        .login-box
+          = yield
+
+      =render 'layouts/footer'

@@ -1,0 +1,13 @@
+%ul.process-menu
+  - if !current_account.verified?
+    %li.pro1
+      = link_to "Verification", verification_path
+  - else
+    %li.pro1
+      = link_to "Profile", control_profile_path
+    %li.pro2
+      = link_to "Login Password", control_change_password_path
+    %li.pro3
+      = link_to "Verification System Credentials", control_wallet_path
+    %li.pro4
+      = link_to "Download Wallet", control_download_wallet_path

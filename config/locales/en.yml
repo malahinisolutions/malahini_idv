@@ -20,4 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  verifications: 
+    first_name_label: "First Name & Middle Name"
+    last_name_label: "Last Name (Surname or Family Name)"
+    mailing_address_label: "Mailing address (if different from the home address)"
+    identify_account_document_label: "Scanned color image or photo of a legal identity document (e.g. passport, identity card or driving license)"
+  accounts:
+    send_wallet_credentials: "A message with a confirmation link has been sent to your email address. Please follow the link to confirm your new credentials."

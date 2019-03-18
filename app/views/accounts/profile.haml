@@ -1,0 +1,19 @@
+.account-area.account-profile-page
+  .row
+    .col-lg-12
+      %h1 Account Profile
+      .act-details
+        .email-div.text-center
+          %img{:src => "/assets/email-icon.png"}
+          %p
+            Email:
+            %span= @account.email
+        .login-div.text-center
+          %img{:src => "/assets/login-icon.png"}
+          %p
+            Login:
+            %span= @account.login
+
+
+
+  

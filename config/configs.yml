@@ -1,0 +1,73 @@
+development:
+  mail_smtp_conf:
+    address: mail.malahinisolutions.com
+    port: 587
+    domain: Verifications.herokuapp.com
+    user_name: support@malahinisolutions.com
+    password: "Password@abc123"
+    authentication: login
+    enable_starttls_auto: true
+
+  server_x:
+    url: "https://stagingx.atenwallet.com/"
+    key: "Xdv7g6Vzzk3VwyZYYqNWy3fnqeDVmvyG"
+    iv: "9eybLDT4qPvQ7Uwh"
+
+
+  accounts:
+    days_without_id_verification: 14
+  account_credentials_key: Xdv7g6Vzzk3VwyZYYqNWy3fnqeDVmvyG
+  url_options:
+    host: verifications.herokuapp.com
+    protocol: https
+  current_wallet_version: "1.2.0"
+
+
+
+production:
+  mail_smtp_conf:
+    address: mail.malahinisolutions.com
+    port: 587
+    domain: Verifications.herokuapp.com
+    user_name: support@malahinisolutions.com
+    password: "Password@abc123"
+    authentication: login
+    enable_starttls_auto: true
+
+  server_x:
+    url: "https://stagingx.atenwallet.com/"
+    key: "Xdv7g6Vzzk3VwyZYYqNWy3fnqeDVmvyG"
+    iv: "9eybLDT4qPvQ7Uwh"
+
+
+  accounts:
+    days_without_id_verification: 14
+  account_credentials_key: Xdv7g6Vzzk3VwyZYYqNWy3fnqeDVmvyG
+  url_options:
+    host: verifications.herokuapp.com
+    protocol: https
+  current_wallet_version: "1.2.0"
+
+
+
+test:
+mail_smtp_conf:
+  address: mail.malahinisolutions.com
+  port: 587
+  domain: Verifications.herokuapp.com
+  user_name: support@malahinisolutions.com
+  password: "Password@abc123"
+  authentication: login
+  enable_starttls_auto: true
+  server_x:
+    url: http://serverx.leader.engine.it/
+    key: "1TB#0KGdUUwJdZKHwMAn#1ReNxX1gDHn"
+    iv: Xdv7g6Vzzk3VwyZY
+
+  accounts:
+    days_without_id_verification: 14
+  account_credentials_key: Xdv7g6Vzzk3VwyZYYqNWy3fnqeDVmvyG
+  url_options:
+    host: verifications.herokuapp.com
+    protocol: https
+  current_wallet_version: "1.2.0"

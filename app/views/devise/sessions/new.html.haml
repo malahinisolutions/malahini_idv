@@ -1,29 +1,24 @@
-.panel.panel-default
-  .panel-heading
-    %h4= t('.sign_in', :default => "Sign in")
-  .panel-body
-    = form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: "form" }) do |f|
-      = devise_error_messages!
+.form_inner
+  %h4.text-center Log into your Account
+  = form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: "form" }) do |f|
+    .form-group.email
+      = f.label :email, 'Email Address'
+      = f.email_field :email, autofocus: true, :required => "true", class: "form-control envelope"
+      %i.fa.fa-envelope{:href => "#"}
+    .form-group.pass
       .row
-        .form-group.col-xs-5
-          = f.label :email
-          = f.email_field :email, autofocus: true, class: "form-control"
-        .col-xs-5.col-xs-offset-7
-        .form-group.col-xs-5
+        .col-sm-6.col-xs-4
           = f.label :password
-          = f.password_field :password, autocomplete: "off", class: "form-control"
-        .col-xs-5.col-xs-offset-7
-        .form-group.col-xs-5
-          = f.label :captcha
-           
-        .col-xs-5.col-xs-offset-7
-        - if devise_mapping.rememberable?
-          .form-group.col-xs-5
-            .checkbox
-              %label
-                = f.check_box :remember_me
-                = f.label :remember_me
-          .col-xs-5.col-xs-offset-7
+        .col-sm-6.text-right.pull-right.forgetp
+          = link_to "Forgot Password?", new_account_password_path
+      = f.password_field :password, autocomplete: "off", :required => "true", class: "form-control"
+      %i.fa.fa-key
+    = f.submit  t('.log_in', :default => "login now"), class: "submit with-bg"
 
-      = f.submit  t('.sign_in', :default => "Sign in"), class: "btn btn-primary"
-/ = render "devise/shared/links"
+    %hr/
+    %span.act-yet.text-center Don’t you have an account yet?
+    %small.member-now.text-center
+      = link_to "Become a member now", agreements_path
+      %br/
+      = link_to t('.resend_confirmation_instructions', :default => "Resend Confirmation Instructions"), new_confirmation_path(resource_name)
+

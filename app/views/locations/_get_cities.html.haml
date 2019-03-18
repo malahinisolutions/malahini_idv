@@ -1,0 +1,3 @@
+- if @cities.any?
+  = label_tag "city_id", "City", class: "cursor-pointer"
+  = text_field_tag "city_id", city, autofocus: true, class: "form-control"

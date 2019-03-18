@@ -1,0 +1,27 @@
+.account-area.account-profile-page
+  .row
+    .col-sm-offset-2.col-sm-8.col-lg-offset-3.col-lg-6
+      .panel.panel-form
+        .panel-heading
+          %h2.text-center
+            = I18n.t('authy_register_title', {:scope => 'devise'})
+        .panel-body
+          = verify_authy_form do
+            %legend= I18n.t('submit_token_title', {:scope => 'devise'})
+            .col-xs-12
+              .col-xs-2
+                = label_tag :token
+              .col-xs-4
+                = text_field_tag :token, "", :autocomplete => :off, :id => 'authy-token', class: "form-control"
+            .col-xs-12
+              .col-xs-6
+                %label
+                  %span= I18n.t('remember_device', {:scope => 'devise'})
+                = check_box_tag :remember_device
+            .col-xs-12
+              .col-xs-6
+                %label
+                  = authy_request_sms_link
+                  / = link_to '?', '#', :id => 'authy-help'
+            %label
+              = submit_tag I18n.t('submit_token', {:scope => 'devise'}), :class => 'submit'

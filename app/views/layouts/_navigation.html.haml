@@ -1,0 +1,25 @@
+%nav.navbar.navbar-inverse.navbar-fixed-top{:role => "navigation"}
+  .container
+    / Brand and toggle get grouped for better mobile display
+    .navbar-header
+      %button.navbar-toggle{"data-target" => ".navbar-ex1-collapse", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+
+      
+    / Collect the nav links, forms, and other content for toggling
+    .collapse.navbar-collapse.navbar-ex1-collapse
+      - if current_account
+        = render 'layouts/control_panel'
+      %ul.nav.navbar-nav.navbar-right.navbar-user
+        = render 'layouts/navigation_links'
+        - if !current_account
+          / %li
+          /   =link_to "Signup", new_account_registration_path, class: 'nav-btn'
+          %li
+            = link_to "Account Registration", agreements_path, class: 'nav-btn'
+        %li
+          = session_link("nav-btn")
+    / /.navbar-collapse

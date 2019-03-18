@@ -1,0 +1,24 @@
+.conatiner{style: "font-weight: bold;"}
+  .row-fluid
+    .col-xs-12{style: "text-align: center;"}
+
+    .col-xs-12
+      %p Dear member,
+      %p You just need to confirm your email address.
+      %p If you do not confirm it within 7 days, your account will be deactivated.
+      %p
+        Just a reminder:
+        %ul
+          %li Never share your password with anyone.
+          %li Never share your personal information with any one.
+          %li Use different passwords for each of your online accounts.
+          %li Be sure to include uppercase and lowercase letters, numbers, and symbols in your password.
+      %p
+        
+        \.
+      %p Sincerely,
+      %p Verification System Team
+      %br
+      %p
+        %h4{style: "text-transform: uppercase;"}
+          = link_to "click here to confirm your account", confirmation_url(@resource, confirmation_token: @token, locale: I18n.locale), style: "color:  #3366FF; font-weight: 600;"

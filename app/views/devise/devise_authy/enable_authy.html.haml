@@ -1,0 +1,11 @@
+.account-area.account-profile-page
+  .row
+    .col-sm-offset-2.col-sm-8.col-lg-offset-3.col-lg-6
+      .panel.panel-form
+        .panel-heading
+          %h2.text-center= I18n.t('authy_register_title', {:scope => 'devise'})
+        .panel-body
+          = enable_authy_form do
+            = text_field_tag :country_code, '', :autocomplete => :off, :placeholder => I18n.t('devise.country'), :id => "authy-countries"
+            = text_field_tag :cellphone, '', :autocomplete => :off, :placeholder => I18n.t('devise.cellphone'), :id => "authy-cellphone"
+            = submit_tag I18n.t('enable_authy', {:scope => 'devise'}), class: "submit"

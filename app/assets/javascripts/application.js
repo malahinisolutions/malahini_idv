@@ -11,6 +11,14 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.waitforimages
+//= require script.js
+//= require active_scaffold
 //= require jquery_ujs
-//= require turbolinks
+//= require jquery-ui
+//= require bootstrap
+//= require gritter
+//= require headshot
+//= require headshot_support
+
 

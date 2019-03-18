@@ -1,0 +1,3 @@
+- if @states.any?
+  = label_tag "state_id", "State", class: "cursor-pointer"
+  = select_tag("state_id", options_from_collection_for_select(@states, "id", "name"), class: "form-control")

@@ -1,0 +1,8 @@
+.form_inner
+  %h4.text-center Resend Confirmation Instructions
+  = form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post, role: "form" }) do |f|
+    .form-group.email
+      = f.label :email, 'Email Address'
+      = f.email_field :email, autofocus: true, class: "form-control envelope" , required: "required"
+      %i.fa.fa-envelope{:href => "#"}
+    = f.submit  t('.log_in', :default => "Resend Instructions"), class: "submit"

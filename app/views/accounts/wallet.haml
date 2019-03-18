@@ -1,0 +1,22 @@
+.account-area.credentials-page
+  .row
+    .col-lg-12
+      %h1 Verification System Credentials
+      .login-box
+        = form_for(@wallet, :html => { :method => :post, role: "form" }) do |f|
+          - if @errors
+            .form-group.text-center
+              .alert.alert-danger
+                - @errors.each do |msg|
+                  %div= msg
+          .form-group.form-group-space
+            = label_tag "username", "User Name"
+            = f.text_field :username, value: @username, :required => "true", class: "form-control"
+          .form-group.form-group-space
+            = f.label :password
+            = f.password_field :password, value: @password, :required => "true", class: "form-control"
+          = submit_tag  "Save", class: "submit"
+          .note
+            %p You are required to input your Verification System Credentials to activate your Verification System Wallet. Without them, you cannot create any Verification System addresses, and you cannot send your Verification Systems to anyone.
+            %h3 Important:
+            %p These Verification System Credentials are linked to your real personal identity, making Verification System AML/KYC compliant. Never give/share your credentials with any other person.

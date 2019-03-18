@@ -1,0 +1,80 @@
+.account-area
+  .row.download-page
+    .col-lg-12
+      - if !current_account.verified?
+        %h1 Identity Verification
+        %p
+          Please verify your identity using one of the two identification documents
+          (Either Drivers License or Passport)
+          Your home address must be on the identification document you chose.
+        %p
+          Your are also required to have a web cam connected to your computer.
+          Without a webcame you won't be able to take the verification process.
+        .row
+          .col-sm-8.col-md-10{style:'padding-left:0px !important;'}
+            = verify_tag(personal_data_path)
+            = iamreal_tag(personal_data_path)
+          .col-sm-8.col-md-10.note{style:'padding-left:0px !important;'}
+            %strong Verification System validates customers passport/drivers license with in 14 working days.
+
+
+
+        - if current_account.temporary?
+          .row
+            .col-sm-12.note
+              If your identity is not successfully verified within 14 days, your account will be deactivated.
+              %br/
+              Days remaining: #{@account.days_remaining_without_verification}
+
+      - else
+        Your account is verified
+
+
+
+.clearfix
+<div id="myModal" class="modal fade">
+<div class="modal-dialog" style="padding:8px;background:rgba(39, 93, 141,0.8);top: 20% !important;">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom:1px solid #bababa;text-align:center; background: -webkit-linear-gradient(top, rgb(249, 249, 249), rgb(233, 233, 233));-webkit-border-top-left-radius: 5px;-webkit-border-top-right-radius: 5px;-moz-border-radius-topleft: 5px;-moz-border-radius-topright: 5px;border-top-left-radius: 5px;border-top-right-radius: 5px;">
+<i class="fa fa-info-circle" aria-hidden="true" style="color:#204d74;font-size:50px;"></i>
+<h4 class="modal-title">Before we start..</h4>
+</div>
+<div class="modal-body">
+<p><i class="fa fa-asterisk" aria-hidden="true" style="color:#5c5c5c;"></i> Do you have working camera on your computer?</p>
+<p><i class="fa fa-asterisk" aria-hidden="true" style="color:#5c5c5c;"></i> Do you have scanned copy of Drivers License or Passport on your computer?</p>
+</div>
+<div class="modal-footer" style="background: -webkit-linear-gradient(top, rgb(249, 249, 249), rgb(233, 233, 233));border-top: 1px solid #bababa !important;text-align:center;">
+<a class="modelclose btn" href="#" style="color:#fff;background-color: #f0ad4e;padding:8px 30px;">No</a>
+<a class="btn btn-primary" style="padding:8px 30px;" href="/control/personal_information">Yes</a>
+<!-- <object width="10" height="10" data="https://www.w3schools.com/html/bookmark.swf"></object>-->
+</div>
+</div>
+</div>
+</div>
+<div id="myModals" class="modal fade">
+<div class="modal-dialog" style="padding:8px;background:rgba(39, 93, 141,0.8);top: 20% !important;">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom:1px solid #bababa;text-align:center; background: -webkit-linear-gradient(top, rgb(249, 249, 249), rgb(233, 233, 233));-webkit-border-top-left-radius: 5px;-webkit-border-top-right-radius: 5px;-moz-border-radius-topleft: 5px;-moz-border-radius-topright: 5px;border-top-left-radius: 5px;border-top-right-radius: 5px;">
+<i class="fa fa-info-circle" aria-hidden="true" style="color:#999;font-size:50px;"></i>
+<h4 class="modal-title">We will wait for you</h4>
+</div>
+<div class="modal-body">
+<p><i class="fa fa-asterisk" aria-hidden="true" style="color:#5c5c5c;"></i> Please try again with a working camera and a scanned copy of Drivers Lincese or Passport on your computer.</p>
+</div>
+<div class="modal-footer" style="background: -webkit-linear-gradient(top, rgb(249, 249, 249), rgb(233, 233, 233));border-top: 1px solid #bababa !important;text-align:center;">
+<button type="button" class="btn btn-primary" style="padding:8px 30px;" data-dismiss="modal">Ok</button>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+$(".verify").click(function(){
+$("#myModal").modal({backdrop: 'static', keyboard: false});
+});
+$(".modelclose").click(function(){
+$("#myModal").modal('hide');
+$("#myModals").modal({backdrop: 'static', keyboard: false});
+});
+});
+</script>

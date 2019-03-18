@@ -1,0 +1,218 @@
+<!--<div id="preloader" style="display: none;">
+  <div class="with_bg" id="status" style="display: none;"></div>
+</div>-->
+
+<section class="main-content-area">
+  <div class="row margin0">
+    <div class="row-inr">
+      <!-- main content starts here -->
+      <div class="admin-head">
+        <%=render 'layouts/verifier_header'%>
+        <div class="container-fluid main-contaier">
+          <div class="working-area">
+            <div class="row download-page" style="margin-top: 10px;">
+              <div class="col-md-4 column video-left-box">
+                <div style="width:100%;">
+                  <div class="panel video-panel panel-primary">
+                    <div class="panel-heading libreStatsPanelHeading">
+                      <div class="panel-title">
+                        <i class="fa fa-video-camera" aria-hidden="true"></i>    <span>Video</span>
+                      </div>
+                    </div>
+                    <div class="panel-body libreStatsPanelBody collapse in">
+                      <%if(@verification[:video_path])%>
+                      <div class="row clearfix libreStatsPanelRow">
+                        <video class="vidoe-user" controls>
+                          <source src="<%=@verification[:video_path]%>" type="video/mp4">
+                          Your browser does not support HTML5 video.
+                        </video>
+                        <div class="video-user-nunber">
+                          <div class="squre-box">
+                            <% @verification[:pin].to_s.each_char do |n| %>
+                            <div class="squre">
+                              <p> <%= n%> </p>
+                            </div>
+                            <%end%>
+                          </div>
+                        </div>
+                      </div>
+                      <%else%>
+                      <p>The client video not submitted.</p>
+                      <%end%>
+                    </div>
+                  </div>
+                </div>
+                <div style="width:100%;">
+                  <div class="panel panel-primary">
+                    <div class="panel-heading libreStatsPanelHeading">
+                      <div class="panel-title">
+                        <i class="fa fa-picture-o" aria-hidden="true"></i>    <span>Passport / Driver's License </span>
+                      </div>
+                    </div>
+                    <div class="panel-body libreStatsPanelBody collapse in" id="uniqueVisitor">
+                      <%if(@verification[:document_path] && @verification[:document_type])%>
+                      <div class="row clearfix libreStatsPanelRow">
+                        <div style="margin-bottom: 15px;float:left !important;width: 100%;">
+                        <span class="user-list-lebal" style="width: 120px !important;"> Document Type :</span>
+                        <span><%=@verification[:document_type]%> </span>
+                        </div>
+                        <div class='list-group gallery'>
+                          <button type="button" class="thumbnail" data-toggle="modal" data-target="#myModal">
+                            <img class="img-responsive"   alt="Images" src="<%=custom_image_path(  @verification[:document_path])%>" />
+                          </button>
+                        </div>
+
+                      </div>
+                      <%else%>
+                      <p>The client document not submitted.</p>
+                      <%end%>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="header-user">
+                  <p>
+                    USER VERIFICATION DETAILS
+                    <span class="back-buttion"> <a href="<%=verifiers_verifications_path%>"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Back </a> </span>
+                  </p>
+                </div>
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <div class="panel-title">
+                      <i class="fa fa-user" aria-hidden="true"></i> User Details
+                    </div>
+                  </div>
+                  <div class="panel-body">
+                    <ul class="user-list-panel">
+                      <li class="list-group-item">
+                        <span class="user-list-lebal"> First Name: </span>
+                        <span><%=@verification[:first_name]%> </span>
+                      </li>
+                      <li class="list-group-item">
+                        <span class="user-list-lebal"> Last Name: </span>
+                        <span><%=@verification[:last_name]%> </span>
+                      </li>
+                      <li class="list-group-item">
+                        <span class="user-list-lebal">  Email:    </span>
+                        <span><%=@verification[:email]%>   </span>
+                      </li>
+                      <li class="list-group-item">
+                        <span class="user-list-lebal"> Date of Birth:  </span>
+                        <span> <%=@verification[:date_of_birth]%> </span>
+                      </li>
+                      <li class="list-group-item">
+                        <span class="user-list-lebal"> Nationality: </span>
+                        <span><%=@verification[:nationality]%> </span>
+                      </li>
+                      <li class="list-group-item">
+                        <span class="user-list-lebal">  Country:  </span>
+                        <%if(@verification[:country])%>
+                        <span><%@c=Country.find(@verification[:country])%><%=@c.Name%></span>
+                        <%end%>
+                      </li>
+                      <li class="list-group-item">
+                        <span class="user-list-lebal"> City: </span>
+                        <span><%=@verification[:city]%> </span>
+                      </li>
+                      <li class="list-group-item">
+                        <span class="user-list-lebal">  Zip: </span>
+                        <span><%=@verification[:zip]%> </span>
+                      </li>
+                      <li class="list-group-item">
+                        <span class="user-list-lebal">  Address: </span>
+                        <span><%=@verification[:home_address]%> </span>
+                      </li>
+                      <li class="list-group-item">
+                        <span class="user-list-lebal">  Verification Submission Date: </span>
+                        <span><%=@verification[:created_at]%> </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <%if(@verification[:status] && @verification[:status]!='')%>
+                <div class="row">
+                  <div class="comment-box">
+                    <%if @verification[:status]=='pending'%>
+                    <%=form_tag({:action=> 'update'}) do %>
+                    <h2>Accept / Decline Reason</h2>
+                    <textarea name="comment" rows="5" style="padding:10px;" class="form-control" required="required"><%=@verification[:comment]%></textarea>
+                    <div class="send-buttion"  style="width: 225px;">
+                        <input type="hidden" name="status">
+                        <input type="hidden" name="current_verifier_email" value="<%=current_verifier.email%>">
+                        <input type="hidden" name="verification_id" value="<%=@verification[:ids]%>">
+                        <input type="hidden" name="account_id" value="<%=@verification[:id]%>">
+                      <input type="submit" value="Decline" class="btn icon-btn btn-danger" onclick="status.value='decline'"  style="padding: 10px;width:100px;">
+                        <input type="submit" value="Accept" class="btn icon-btn btn-warning" onclick="status.value='accept'"   style="padding: 10px;width:100px;">
+                    </div>
+                    <%end%>
+                    <%else%>
+                        <h2>Accept / Decline Reason</h2>
+                        <textarea name="comment" rows="5" style="padding:10px;" class="form-control" required="required"><%=@verification[:comment]%></textarea>
+                        <div style="margin-top: 15px;">
+                          <div style="float:left !important;"><span class="user-list-lebal" style="width: 137px !important;"> Support Executive :</span>
+                          <%if(@verification[:verified_by])%><span><%=@verification[:verified_by]%></span><%else%><span>support@atenwallet.com</span><%end%>
+                        </div><div style="float:right !important;"><span class="user-list-lebal" style="width: 157px !important;"> Accept / Decline Date :</span>
+                          <span><%=@verification[:updated_at]%></span>
+                        </div></div>
+                    <%end%>
+                  </div>
+                </div>
+                <%end%>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <%if(@verification[:document_path] && @verification[:document_type])%>
+ <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+         <h4 class="modal-title" id="myModalLabel">Passport / Driver's License</h4>
+       </div>
+       <div class="modal-body">
+         <div class="form-group">
+        <img class="img-responsive"   alt="Images" src="<%=custom_image_path(  @verification[:document_path])%>" />
+       </div>
+     </div>
+     </div>
+   </div>
+ </div>
+<%end%>
+<link rel='stylesheet' href='https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css'/>
+
+ <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+
+ <script>
+ $('.modal-content').resizable({
+     //alsoResize: ".modal-dialog",
+  minWidth: 200,maxWidth: 800,minHeight: 200, maxHeight: 550,height: 400,handles: "se"
+   });
+  // $('.modal-dialog').draggable();
+
+ $( ".modal-dialog" ).draggable({ containment: "body" });
+
+ </script>
+<style>
+.user-list-lebal{float:none !important;width:240px !important;display: inline-block;}
+.account-profile-page .main-content-area{min-height: 100%;}
+footer{left: 0;bottom: 0;overflow:hidden;}
+.video-panel{min-height: 205px;}
+.libreStatsPanelBody{min-height: 205px;}
+.modal-dialog {margin:10px 10px 10px 10px !important;}
+.modal-backdrop{ position: relative !important;}
+.ui-resizable{    display: table;
+    overflow: auto;
+    width: 300px;
+    min-width: 300px;
+    position: absolute !important;
+    height: 200px;}
+    .img-responsive{width: 100%;}
+</style>

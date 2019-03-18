@@ -4,16 +4,18 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # config.secret_key = 'e735aab39b448485ce2836b69c7e5cc7bc5f8fb3bfcf20450f4283fe6f56c26cd1106c04858b2762e17ca529cce8ca6e7b5702114fb313a1252058da5a55bc56'
+  # config.secret_key = '1a76220b3dd6f769fd6e4421238d72ed968e32978890c5163ddf8007d759c9db1178108a4f88a73a64a2634e0867177f1c5b29acaa78d422f24b732476e3c927'
+  config.secret_key = '25a65a336b4c61c683eca14295bbfca24361bbdd4fa7fd71b61295f618152a024fdc799f9fd43b31f003ce940aea49685e3e6a0ad7191b2ca1aeb6442e48d74f'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'support@malahinisolutions.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
+  config.mailer = 'DeviseMailer'
 
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and
@@ -97,7 +99,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = 'eabb55bbb247221aa88b19bb8012bcd20bb69193a83b4d644090ff92eac9f486f721d9a44926216ba84e0922e716c91c1df09c3fc1113905a788a94fbb25c2ac'
+  # config.pepper = '93f04e49be4c2bd18db0d5057dc77ad5f6bc54c3dc1dad6a73072299acc09a7c6377c87c329dc1e78cea6b7deaf8d02e1d6548400ece3c30b7471eed5fc73e62'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -105,7 +107,7 @@ Devise.setup do |config|
   # able to access the website for two days without confirming their account,
   # access will be blocked just in the third day. Default is 0.days, meaning
   # the user cannot access the website without confirming their account.
-  # config.allow_unconfirmed_access_for = 2.days
+  # config.allow_unconfirmed_access_for = 7.days
 
   # A period that the user is allowed to confirm their account before their
   # token becomes invalid. For example, if set to 3.days, the user can confirm
@@ -140,7 +142,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :validatable
   # Range for password length.
-  config.password_length = 8..128
+  config.password_length = 6..128
 
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly
@@ -150,7 +152,7 @@ Devise.setup do |config|
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
-  # config.timeout_in = 30.minutes
+  config.timeout_in = 30.minutes
 
   # If true, expires auth token on session timeout.
   # config.expire_auth_token_on_timeout = false
@@ -256,4 +258,38 @@ Devise.setup do |config|
   # When using omniauth, Devise cannot automatically set Omniauth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+
+  # ==> Devise Google Authenticator Extension
+  # Configure extension for devise
+
+  # How long should the user have to enter their token. To change the default, uncomment and change the below:
+  # config.ga_timeout = 3.minutes
+
+  # Change time drift settings for valid token values. To change the default, uncomment and change the below:
+  # config.ga_timedrift = 3
+
+  # Change setting to how long to remember device before requiring another token. Change to nil to turn feature off.
+  # To change the default, uncomment and change the below:
+  # config.ga_remembertime = 1.month
+
+  # Change setting to assign the application name used by code generator. Defaults to Rails.application.class.parent_name.
+  # To change the default, uncomment and change the below:
+  # config.ga_appname = 'bgcwallet.com'
+
+  # Change setting to bypass the Display QR page immediately after a user sign's up
+  # To change the default, uncomment and change the below. Defaults to false:
+  # config.ga_bypass_signup = true
+
+
+
+  # ==> Devise Authy Authentication Extension
+  # How long should the user's device be remembered for.
+  # config.authy_remember_device = 1.month
+
+  Devise::SessionsController.layout "auth"
+  Devise::RegistrationsController.layout "auth"
+  Devise::ConfirmationsController.layout "auth"
+  Devise::UnlocksController.layout "auth"
+  Devise::PasswordsController.layout "auth"
+
 end

@@ -1,0 +1,11 @@
+%ul.nav.navbar-nav.side-nav
+  %li.sbhead
+    %i.fa.fa-dashboard
+    Control Panel
+  %li{ class: active_class(control_profile_path) }
+    %a{href: control_profile_path}
+      Account Profile, Verification & 2FA
+  %li{ class: active_class(control_change_password_path) }
+    %a{:href => control_change_password_path}
+      Login Password
+   
