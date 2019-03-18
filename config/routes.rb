@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+Www.application.routes.draw do
 
   get  "images/:name" => "images#show", :as => :custom_image
   namespace :verifiers do
