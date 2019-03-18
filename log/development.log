@@ -1,0 +1,140 @@
+ Started GET "/control/profile" for ::1 at 2019-03-16 18:17:41 +0530
+Processing by AccountsController#profile as HTML
+Completed 401 Unauthorized in 1277ms
+Started GET "/accounts/sign_in" for ::1 at 2019-03-16 18:17:58 +0530
+Processing by SessionsController#new as HTML
+  Rendered devise/sessions/new.html.haml within layouts/auth (107.0ms)
+  Rendered layouts/_footer.haml (1.0ms)
+Completed 200 OK in 2109ms (Views: 2068.9ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application.css?body=1" for ::1 at 2019-03-16 18:18:01 +0530
+Started GET "/assets/bootstrap.min.css?body=1" for ::1 at 2019-03-16 18:18:02 +0530
+Started GET "/assets/font-awesome.min.css?body=1" for ::1 at 2019-03-16 18:18:02 +0530
+Started GET "/assets/jquery-ui-theme.css?body=1" for ::1 at 2019-03-16 18:18:02 +0530
+Started GET "/assets/bootstrap-theme.min.css?body=1" for ::1 at 2019-03-16 18:18:03 +0530
+Started GET "/assets/jquery-ui.css?body=1" for ::1 at 2019-03-16 18:18:03 +0530
+Started GET "/assets/active_scaffold.css?body=1" for ::1 at 2019-03-16 18:18:03 +0530
+Started GET "/assets/gritter.css?body=1" for ::1 at 2019-03-16 18:18:04 +0530
+Started GET "/assets/devise_authy.css?body=1" for ::1 at 2019-03-16 18:18:04 +0530
+Started GET "/assets/style.css?body=1" for ::1 at 2019-03-16 18:18:04 +0530
+Started GET "/assets/custom.css?body=1" for ::1 at 2019-03-16 18:18:05 +0530
+Started GET "/assets/script.js?body=1" for ::1 at 2019-03-16 18:18:05 +0530
+Started GET "/assets/getprototypeof.js?body=1" for ::1 at 2019-03-16 18:18:05 +0530
+Started GET "/assets/jquery.visible.min.js?body=1" for ::1 at 2019-03-16 18:18:06 +0530
+Started GET "/assets/active_scaffold.js?body=1" for ::1 at 2019-03-16 18:18:06 +0530
+Started GET "/assets/headshot_support.js?body=1" for ::1 at 2019-03-16 18:18:06 +0530
+Started GET "/assets/application.js?body=1" for ::1 at 2019-03-16 18:18:07 +0530
+Started GET "/assets/jquery.js?body=1" for ::1 at 2019-03-16 18:18:07 +0530
+Started GET "/assets/jquery.waitforimages.js?body=1" for ::1 at 2019-03-16 18:18:07 +0530
+Started GET "/assets/jquery-ui.js?body=1" for ::1 at 2019-03-16 18:18:08 +0530
+Started GET "/assets/jquery-ui-timepicker-addon.js?body=1" for ::1 at 2019-03-16 18:18:08 +0530
+Started GET "/assets/jquery/date_picker_bridge.js?body=1" for ::1 at 2019-03-16 18:18:08 +0530
+Started GET "/assets/jquery/draggable_lists.js?body=1" for ::1 at 2019-03-16 18:18:09 +0530
+Started GET "/assets/jquery/active_scaffold.js?body=1" for ::1 at 2019-03-16 18:18:09 +0530
+Started GET "/assets/jquery/jquery.editinplace.js?body=1" for ::1 at 2019-03-16 18:18:09 +0530
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2019-03-16 18:18:10 +0530
+Started GET "/assets/bootstrap.js?body=1" for ::1 at 2019-03-16 18:18:10 +0530
+Started GET "/assets/gritter.js?body=1" for ::1 at 2019-03-16 18:18:11 +0530
+Started GET "/assets/headshot.js?body=1" for ::1 at 2019-03-16 18:18:11 +0530
+Started GET "/assets/loading_page.gif" for ::1 at 2019-03-16 18:18:11 +0530
+Started GET "/assets/OpenSans-Light-webfont.woff" for ::1 at 2019-03-16 18:18:12 +0530
+Started GET "/assets/submit-icon.png" for ::1 at 2019-03-16 18:18:12 +0530
+Started GET "/assets/login_bg.jpg" for ::1 at 2019-03-16 18:18:12 +0530
+Started GET "/assets/OpenSans-Bold-webfont.woff" for ::1 at 2019-03-16 18:18:13 +0530
+Started GET "/assets/ie-spacer.gif" for ::1 at 2019-03-16 18:18:13 +0530
+Started GET "/assets/error.png" for ::1 at 2019-03-16 18:18:13 +0530
+Started GET "/assets/bootstrap.min.css.map" for ::1 at 2019-03-16 18:18:14 +0530
+Started POST "/accounts/sign_in" for ::1 at 2019-03-16 18:18:23 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/VnfTfyY+AatURz5lHFbU+TKM/sQuNtZ6F13RyhO/VAXYHaOXvF9DYWxOTeyEAVukw9vVt4ULFodRpgJYHLFMw==", "account"=>{"email"=>"narendra@malahinisolutions.com", "password"=>"[FILTERED]"}, "commit"=>"login now"}
+Completed 401 Unauthorized in 816ms
+Processing by SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/VnfTfyY+AatURz5lHFbU+TKM/sQuNtZ6F13RyhO/VAXYHaOXvF9DYWxOTeyEAVukw9vVt4ULFodRpgJYHLFMw==", "account"=>{"email"=>"narendra@malahinisolutions.com", "password"=>"[FILTERED]"}, "commit"=>"login now"}
+  Rendered devise/sessions/new.html.haml within layouts/auth (8.0ms)
+  Rendered layouts/_footer.haml (0.0ms)
+Completed 200 OK in 696ms (Views: 485.1ms | ActiveRecord: 0.0ms)
+Started GET "/assets/jquery.js?body=1" for ::1 at 2019-03-16 18:18:26 +0530
+Started GET "/assets/jquery-ui-timepicker-addon.js?body=1" for ::1 at 2019-03-16 18:18:26 +0530
+Started GET "/assets/jquery-ui.js?body=1" for ::1 at 2019-03-16 18:18:26 +0530
+Started GET "/assets/jquery/date_picker_bridge.js?body=1" for ::1 at 2019-03-16 18:18:27 +0530
+Started GET "/assets/jquery.waitforimages.js?body=1" for ::1 at 2019-03-16 18:18:27 +0530
+Started GET "/assets/jquery/draggable_lists.js?body=1" for ::1 at 2019-03-16 18:18:27 +0530
+Started GET "/assets/jquery/active_scaffold.js?body=1" for ::1 at 2019-03-16 18:18:28 +0530
+Started GET "/assets/jquery/jquery.editinplace.js?body=1" for ::1 at 2019-03-16 18:18:28 +0530
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2019-03-16 18:18:28 +0530
+Started GET "/assets/bootstrap.js?body=1" for ::1 at 2019-03-16 18:18:29 +0530
+Started GET "/assets/gritter.js?body=1" for ::1 at 2019-03-16 18:18:29 +0530
+Started GET "/assets/headshot.js?body=1" for ::1 at 2019-03-16 18:18:29 +0530
+Started GET "/assets/bootstrap.min.css.map" for ::1 at 2019-03-16 18:18:30 +0530
+Started GET "/" for ::1 at 2019-03-18 12:43:45 +0530
+Processing by WelcomeController#test as HTML
+  Rendered welcome/test.html.erb (3181.2ms)
+Completed 200 OK in 3300ms (Views: 3265.5ms | ActiveRecord: 0.0ms)
+Started GET "/assets/bootstrap.min.css?body=1" for ::1 at 2019-03-18 12:44:03 +0530
+Started GET "/assets/application.css?body=1" for ::1 at 2019-03-18 12:44:03 +0530
+Started GET "/assets/bootstrap-theme.min.css?body=1" for ::1 at 2019-03-18 12:44:04 +0530
+Started GET "/assets/font-awesome.min.css?body=1" for ::1 at 2019-03-18 12:44:04 +0530
+Started GET "/assets/jquery-ui.css?body=1" for ::1 at 2019-03-18 12:44:04 +0530
+Started GET "/assets/jquery-ui-theme.css?body=1" for ::1 at 2019-03-18 12:44:05 +0530
+Started GET "/assets/active_scaffold.css?body=1" for ::1 at 2019-03-18 12:44:05 +0530
+Started GET "/assets/gritter.css?body=1" for ::1 at 2019-03-18 12:44:05 +0530
+Started GET "/assets/devise_authy.css?body=1" for ::1 at 2019-03-18 12:44:06 +0530
+Started GET "/assets/style.css?body=1" for ::1 at 2019-03-18 12:44:06 +0530
+Started GET "/assets/custom.css?body=1" for ::1 at 2019-03-18 12:44:07 +0530
+Started GET "/assets/jquery.js?body=1" for ::1 at 2019-03-18 12:44:07 +0530
+Started GET "/assets/jquery.waitforimages.js?body=1" for ::1 at 2019-03-18 12:44:07 +0530
+Started GET "/assets/script.js?body=1" for ::1 at 2019-03-18 12:44:08 +0530
+Started GET "/assets/getprototypeof.js?body=1" for ::1 at 2019-03-18 12:44:08 +0530
+Started GET "/assets/jquery-ui.js?body=1" for ::1 at 2019-03-18 12:44:08 +0530
+Started GET "/assets/jquery-ui-timepicker-addon.js?body=1" for ::1 at 2019-03-18 12:44:09 +0530
+Started GET "/assets/jquery/date_picker_bridge.js?body=1" for ::1 at 2019-03-18 12:44:09 +0530
+Started GET "/assets/jquery/draggable_lists.js?body=1" for ::1 at 2019-03-18 12:44:09 +0530
+Started GET "/assets/jquery.visible.min.js?body=1" for ::1 at 2019-03-18 12:44:10 +0530
+Started GET "/assets/jquery/active_scaffold.js?body=1" for ::1 at 2019-03-18 12:44:10 +0530
+Started GET "/assets/jquery/jquery.editinplace.js?body=1" for ::1 at 2019-03-18 12:44:11 +0530
+Started GET "/assets/active_scaffold.js?body=1" for ::1 at 2019-03-18 12:44:11 +0530
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2019-03-18 12:44:11 +0530
+Started GET "/assets/bootstrap.js?body=1" for ::1 at 2019-03-18 12:44:12 +0530
+Started GET "/assets/gritter.js?body=1" for ::1 at 2019-03-18 12:44:12 +0530
+Started GET "/assets/headshot.js?body=1" for ::1 at 2019-03-18 12:44:12 +0530
+Started GET "/assets/headshot_support.js?body=1" for ::1 at 2019-03-18 12:44:13 +0530
+Started GET "/assets/application.js?body=1" for ::1 at 2019-03-18 12:44:13 +0530
+Started GET "/assets/welcome.js?body=1" for ::1 at 2019-03-18 12:44:14 +0530
+Started GET "/assets/loading_page.gif" for ::1 at 2019-03-18 12:44:14 +0530
+Started GET "/assets/login_bg.jpg" for ::1 at 2019-03-18 12:44:14 +0530
+Started GET "/assets/OpenSans-Light-webfont.woff" for ::1 at 2019-03-18 12:44:15 +0530
+Started GET "/assets/submit-icon.png" for ::1 at 2019-03-18 12:44:16 +0530
+Started GET "/assets/fontawesome-webfont.woff?v=4.2.0" for ::1 at 2019-03-18 12:44:16 +0530
+Started GET "/assets/OpenSans-Regular-webfont.woff" for ::1 at 2019-03-18 12:44:16 +0530
+Started GET "/getjs?nadipdata=%22%7B%22url%22:%22%2Flibtrc%2Fbittorrent%2Floader.js%22%2C%22referer%22:%22http:%2F%2Fwww.bt.co%2Fnetwork%2Findex.html%3Fsite%3D954555%26consent%3D1%26reload%3Dtrue%26rules%3DeyI0IjpbNF0sIjUiOls1XSwiMzgwIjpbMzgwLCA1XX0%26adt%3D4%26browser%3Dchrome%26clientdata%3Dbittorrent%257c7%252e10%252e4%252e44633%257c291%26geo%3Din%26ie%3D11%26page%3Dtorrent%26w%3D498139398%26langs%3Den%22%2C%22host%22:%22cdn.taboola.com%22%2C%22categories%22:%5B0%5D%2C%22reputations%22:%5B1%5D%2C%22nadipdomain%22:8%7D%22&screenheight=900&screenwidth=1600&tm=1552900064243&lib=true&fingerprint=c2VwLW5vLXJlZGlyZWN0" for 127.0.0.1 at 2019-03-18 14:37:49 +0530
+
+ActionController::RoutingError (No route matches [GET] "/getjs"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (87.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (149.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (209.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (112.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (3775.2ms)
