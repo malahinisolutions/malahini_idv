@@ -1,0 +1,1 @@
+{"cmd"=>"sign_output", "hash"=>"00a92b19bbfcf07274d1a71b41264f05", "login"=>"1", "output_hash"=>"2ac793f288454580383062f2ad9d55350a6610a9fdbaf4b8df2ed12227bb6360", "server_pubkey"=>"046a5bc8a25cdc4b461d0d7a2b19c182db7e9a7aec05a736b8eb793027bc6ce05b9b1495dc305ec519cb3c693fd0a2b5466563b46be91d06c5f3cbb0ac0b804e38", "format"=>:json, "controller"=>"api/main", "action"=>"call"}
